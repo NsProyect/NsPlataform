@@ -11,7 +11,13 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140605145232) do
+ActiveRecord::Schema.define(version: 20140610161040) do
+
+  create_table "contactos", force: true do |t|
+    t.string   "index"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "employees", force: true do |t|
     t.string   "name"
@@ -21,6 +27,29 @@ ActiveRecord::Schema.define(version: 20140605145232) do
     t.string   "password"
     t.string   "email"
     t.string   "nickName"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "galeria", force: true do |t|
+    t.string   "index"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "inicios", force: true do |t|
+    t.string   "index"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "reservas", force: true do |t|
+    t.string   "nombre"
+    t.string   "email"
+    t.date     "fecha_ingreso"
+    t.date     "fecha_salida"
+    t.string   "apartamento"
+    t.string   "hostal"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
