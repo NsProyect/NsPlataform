@@ -4,7 +4,8 @@ class EmployeesController < ApplicationController
   # GET /employees
   # GET /employees.json
   def index
-    @employees = Employee.all
+    #@employees = Employee.all
+    @employees = Employee.search(params[:search], params[:page])
   end
 
   # GET /employees/1
@@ -28,7 +29,7 @@ class EmployeesController < ApplicationController
 
     respond_to do |format|
       if @employee.save
-        format.html { redirect_to @employee, notice: 'Employee was successfully created.' }
+        format.html { redirect_to @employee, notice: 'Empleado Creado Satisfactoriamente.' }
         format.json { render :show, status: :created, location: @employee }
       else
         format.html { render :new }
@@ -42,7 +43,7 @@ class EmployeesController < ApplicationController
   def update
     respond_to do |format|
       if @employee.update(employee_params)
-        format.html { redirect_to @employee, notice: 'Employee was successfully updated.' }
+        format.html { redirect_to @employee, notice: 'Empleado Modificado Satisfactoriamente.' }
         format.json { render :show, status: :ok, location: @employee }
       else
         format.html { render :edit }
@@ -56,7 +57,7 @@ class EmployeesController < ApplicationController
   def destroy
     @employee.destroy
     respond_to do |format|
-      format.html { redirect_to employees_url, notice: 'Employee was successfully destroyed.' }
+      format.html { redirect_to employees_url, notice: 'Empleado Destruido Satisfactoriamente.' }
       format.json { head :no_content }
     end
   end
@@ -69,6 +70,6 @@ class EmployeesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def employee_params
-      params.require(:employee).permit(:name, :lastName, :document, :charge, :password, :email, :nickName)
+      params.require(:employee).permit(:name, :lastName, :doc, :charge_id, :password, :mail, :nickName)
     end
 end

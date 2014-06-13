@@ -11,16 +11,43 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140605145232) do
+ActiveRecord::Schema.define(version: 20140612150950) do
+
+  create_table "apartaments", force: true do |t|
+    t.string   "adress"
+    t.integer  "states_id"
+    t.string   "room"
+    t.integer  "cost"
+    t.text     "amenities"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "apartaments", ["states_id"], name: "index_apartaments_on_states_id"
+
+  create_table "charges", force: true do |t|
+    t.string   "name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "employees", force: true do |t|
     t.string   "name"
     t.string   "lastName"
-    t.string   "document"
-    t.string   "charge"
+    t.string   "doc"
+    t.integer  "charge_id"
     t.string   "password"
-    t.string   "email"
+    t.string   "mail"
     t.string   "nickName"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "employees", ["charge_id"], name: "index_employees_on_charge_id"
+
+  create_table "states", force: true do |t|
+    t.string   "name"
+    t.text     "description"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

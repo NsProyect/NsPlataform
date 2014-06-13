@@ -1,0 +1,39 @@
+<%= form_for(@apartament) do |f| %>
+  <% if @apartament.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@apartament.errors.count, "error") %> prohibited this apartament from being saved:</h2>
+
+      <ul>
+      <% @apartament.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :Direccion %><br>
+    <%= f.text_field :adress %>
+  </div>
+  <div class="field"> 
+    Estado <br>
+    <%= f.collection_select :states_id, State.all, :id, :name, class: "form-control", prompt: 
+    "Seleccione Estado" %> 
+  </div>
+
+  <div class="field">
+    <%= f.label :Habitaciones %><br>
+    <%= f.text_field :room %>
+  </div>
+  <div class="field">
+    <%= f.label :Costo %><br>
+    <%= f.number_field :cost %>
+  </div>
+  <div class="field">
+    <%= f.label :Comodidades %><br>
+    <%= f.text_area :amenities %>
+  </div>
+  <div class="actions">
+    <%= f.submit "Guardar"%>
+  </div>
+<% end %>

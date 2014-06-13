@@ -1,4 +1,10 @@
 Rails.application.routes.draw do
+  resources :apartaments
+
+  resources :states
+
+  resources :charges
+
   resources :employees
 
   # The priority is based upon order of creation: first created -> highest priority.

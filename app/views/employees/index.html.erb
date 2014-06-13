@@ -1,15 +1,15 @@
-<h1>Listado De Empleados</h1>
+<h1>Lista de Empleados</h1>
 
 <table>
   <thead>
     <tr>
       <th>Nombre</th>
-      <th>Apellido</th>
+      <th>Apellidos</th>
+      <th>Nombre de Usuario</th>
       <th>Documento</th>
       <th>Cargo</th>
       <th>Contraseña</th>
-      <th>Email</th>
-      <th>Usuario</th>
+      <th>Mail</th>      
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -17,16 +17,16 @@
   <tbody>
     <% @employees.each do |employee| %>
       <tr>
-        <td><%= employee.name %></td>
-        <td><%= employee.lastName %></td>
-        <td><%= employee.document %></td>
-        <td><%= employee.charge %></td>
+        <td class="active"><%= employee.name %></td>
+        <td class="success"><%= employee.lastName %></td>
+        <td class="warning"><%= employee.nickName %></td>
+        <td class="danger"><%= employee.doc %></td>
+        <td class="info"><%= employee.charge.name rescue nil %></td>
         <td><%= employee.password %></td>
-        <td><%= employee.email %></td>
-        <td><%= employee.nickName %></td>
-        <td><%= link_to 'Show', employee %></td>
-        <td><%= link_to 'Edit', edit_employee_path(employee) %></td>
-        <td><%= link_to 'Destroy', employee, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= employee.mail %></td>        
+        <td><%= link_to 'Ver', employee %></td>
+        <td><%= link_to 'Editar', edit_employee_path(employee) %></td>
+        <td><%= link_to 'Destruir', employee, method: :delete, data: { confirm: 'Esta Seguro?' } %></td>
       </tr>
     <% end %>
   </tbody>
