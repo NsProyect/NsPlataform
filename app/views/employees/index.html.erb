@@ -1,14 +1,13 @@
 <h1>Lista de Empleados</h1>
 
-<table>
+<table class="table table-striped table-hover ">
   <thead>
-    <tr>
+    <tr class="danger">
       <th>Nombre</th>
       <th>Apellidos</th>
       <th>Nombre de Usuario</th>
       <th>Documento</th>
       <th>Cargo</th>
-      <th>Contraseña</th>
       <th>Mail</th>      
       <th colspan="3"></th>
     </tr>
@@ -16,13 +15,12 @@
 
   <tbody>
     <% @employees.each do |employee| %>
-      <tr>
-        <td class="active"><%= employee.name %></td>
-        <td class="success"><%= employee.lastName %></td>
-        <td class="warning"><%= employee.nickName %></td>
-        <td class="danger"><%= employee.doc %></td>
-        <td class="info"><%= employee.charge.name rescue nil %></td>
-        <td><%= employee.password %></td>
+      <tr class="success">
+        <td><%= employee.name %></td>
+        <td><%= employee.lastName %></td>
+        <td><%= employee.nickName %></td>
+        <td><%= employee.doc %></td>
+        <td><%= employee.charge.name rescue nil %></td>
         <td><%= employee.mail %></td>        
         <td><%= link_to 'Ver', employee %></td>
         <td><%= link_to 'Editar', edit_employee_path(employee) %></td>
