@@ -1,0 +1,61 @@
+<%= form_for(@inicio) do |f| %>
+  <% if @inicio.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@inicio.errors.count, "error") %> prohibited this inicio from being saved:</h2>
+
+      <ul>
+      <% @inicio.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :direccion %><br>
+    <%= f.text_field :direccion %>
+  </div>
+  <div class="field">
+    <%= f.label :barrio %><br>
+    <%= f.text_field :barrio %>
+  </div>
+  <div class="field">
+    <%= f.label :habitacion %><br>
+    <%= f.text_field :habitacion %>
+  </div>
+  <div class="field">
+    <%= f.label :baño %><br>
+    <%= f.text_field :baño %>
+  </div>
+  <div class="field">
+    <%= f.label :cocina %><br>
+    <%= f.text_field :cocina %>
+  </div>
+  <div class="field">
+    <%= f.label :sala %><br>
+    <%= f.text_field :sala %>
+  </div>
+  <div class="field">
+    <%= f.label :comedor %><br>
+    <%= f.text_field :comedor %>
+  </div>
+  <div class="field">
+    <%= f.label :descripcion %><br>
+    <%= f.text_area :descripcion %>
+  </div>
+  <div class="field">
+    <%= f.label :precio %><br>
+    <%= f.text_field :precio %>
+  </div>
+  <div class="field">
+    <%= f.label :Estado_id %><br>
+    <%= f.text_field :Estado_id %>
+  </div>
+  <div class="field">
+    <%= f.label :amoblado %><br>
+    <%= f.check_box :amoblado %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
