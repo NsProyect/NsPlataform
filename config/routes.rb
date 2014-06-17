@@ -1,4 +1,12 @@
 Rails.application.routes.draw do
+  resources :inicios
+
+  resources :estados
+
+  resources :mas_informacions
+
+  resources :sitios
+
   get 'galeria/index'
 
   get 'contactos/index'
@@ -19,7 +27,7 @@ Rails.application.routes.draw do
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-  root 'inicio#index'
+  root 'inicios#index'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

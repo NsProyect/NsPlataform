@@ -1,7 +1,27 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  index: MyString
+  direccion: MyString
+  barrio: MyString
+  habitacion: MyString
+  baño: MyString
+  cocina: MyString
+  sala: MyString
+  comedor: MyString
+  descripcion: MyText
+  precio: MyString
+  Estado_id: 
+  amoblado: false
 
 two:
-  index: MyString
+  direccion: MyString
+  barrio: MyString
+  habitacion: MyString
+  baño: MyString
+  cocina: MyString
+  sala: MyString
+  comedor: MyString
+  descripcion: MyText
+  precio: MyString
+  Estado_id: 
+  amoblado: false
