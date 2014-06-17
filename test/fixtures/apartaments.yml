@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  adress: MyString
+  states_id: 
+  room: MyString
+  cost: 1
+  amenities: MyText
+
+two:
+  adress: MyString
+  states_id: 
+  room: MyString
+  cost: 1
+  amenities: MyText

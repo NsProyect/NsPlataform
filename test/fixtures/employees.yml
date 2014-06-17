@@ -3,17 +3,17 @@
 one:
   name: MyString
   lastName: MyString
-  document: MyString
-  charge: MyString
+  doc: MyString
+  charge_id: 
   password: MyString
-  email: MyString
+  mail: MyString
   nickName: MyString
 
 two:
   name: MyString
   lastName: MyString
-  document: MyString
-  charge: MyString
+  doc: MyString
+  charge_id: 
   password: MyString
-  email: MyString
+  mail: MyString
   nickName: MyString

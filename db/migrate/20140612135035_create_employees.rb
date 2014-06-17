@@ -3,10 +3,10 @@ class CreateEmployees < ActiveRecord::Migration
     create_table :employees do |t|
       t.string :name
       t.string :lastName
-      t.string :document
-      t.string :charge
+      t.string :doc
+      t.references :charge, index: true
       t.string :password
-      t.string :email
+      t.string :mail
       t.string :nickName
 
       t.timestamps

@@ -39,6 +39,7 @@ gem 'spring',        group: :development
 # gem 'debugger', group: [:development, :test]
 gem 'bootstrap-sass'
 
+<<<<<<< HEAD
 group :development do
 gem 'better_errors'
 gem 'binding_of_caller', :platforms=>[:mri_19, :mri_20, :rbx]
@@ -54,3 +55,17 @@ gem 'paperclip'
 
 gem 'will_paginate'
 gem 'will_paginate-bootstrap'
+=======
+gem 'will_paginate','~> 3.0'
+
+gem 'bootstrap-sass'
+
+group :development do
+	gem 'better_errors'
+	gem 'binding_of_caller', :platforms=>[:mri_19, :mri_20, :rbx]
+	gem 'quiet_assets'
+	gem 'rails_layout'
+end
+
+gem 'simple_form'
+>>>>>>> 8e063ec32ec67c74c9b06d5853689bd6ee1ce107
