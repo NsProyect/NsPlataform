@@ -26,7 +26,7 @@
     <% @apartaments.each do |apartament| %>
       <tr class="success">
         <td><%= apartament.adress %></td>
-        <td><%= apartament.states.name rescue nil %></td>
+        <td><%= apartament.state.name rescue nil %></td>
         <td><%= apartament.room %></td>
         <td><%= apartament.cost %></td>
         <td><%= apartament.amenities %></td>

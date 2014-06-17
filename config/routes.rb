@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :doc_types
+
   resources :apartaments
 
   resources :states
