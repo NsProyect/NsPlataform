@@ -10,6 +10,11 @@
  * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
  * file per style scope.
  *
+<<<<<<< HEAD
  *= require_tree .
+=======
+ *= require lazybox
+*= require_tree .
+>>>>>>> 23b631af6121230684c594c7a96b41534b118d58
  *= require_self
  */

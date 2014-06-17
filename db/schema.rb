@@ -11,6 +11,12 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+<<<<<<< HEAD
+ActiveRecord::Schema.define(version: 20140617144546) do
+
+  create_table "contactos", force: true do |t|
+    t.string   "index"
+=======
 ActiveRecord::Schema.define(version: 20140617072615) do
 
   create_table "apartaments", force: true do |t|
@@ -34,6 +40,7 @@ ActiveRecord::Schema.define(version: 20140617072615) do
   create_table "doc_types", force: true do |t|
     t.string   "abbrev"
     t.string   "name"
+>>>>>>> 8e063ec32ec67c74c9b06d5853689bd6ee1ce107
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -50,13 +57,44 @@ ActiveRecord::Schema.define(version: 20140617072615) do
     t.datetime "updated_at"
   end
 
+<<<<<<< HEAD
+  create_table "estados", force: true do |t|
+    t.string   "nombre"
+    t.text     "descripcion"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+# Could not dump table "inicios" because of following NoMethodError
+#   undefined method `[]' for nil:NilClass
+
+  create_table "mas_informacions", force: true do |t|
+=======
   add_index "employees", ["charge_id"], name: "index_employees_on_charge_id"
 
   create_table "states", force: true do |t|
     t.string   "name"
     t.text     "description"
+>>>>>>> 8e063ec32ec67c74c9b06d5853689bd6ee1ce107
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
+<<<<<<< HEAD
+  create_table "reservas", force: true do |t|
+    t.string   "nombre"
+    t.string   "email"
+    t.date     "fecha_ingreso"
+    t.date     "fecha_salida"
+    t.string   "apartamento"
+    t.string   "hostal"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+# Could not dump table "sitios" because of following NoMethodError
+#   undefined method `[]' for nil:NilClass
+
+=======
+>>>>>>> 8e063ec32ec67c74c9b06d5853689bd6ee1ce107
 end

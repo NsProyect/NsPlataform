@@ -1,0 +1,54 @@
+<h1>Listing inicios</h1>
+<div class="jumbotron">
+      <h1>Información:</h1>
+     <P>Se arriendan apartamentos amoblados ubicados varios sectores de la ciudad de medellín. Tenemos apartamentos de 1,2 o 3 habitaciones y adecuados para alojar desde 1 a 6 o mas personas. Dependiendo de las necesidades cada persona. Se arrienda por días, semanas o temporadas; como son la feria internacional del tango, colombia moda, feria de las flores, alumbrados navideños, entre otras.Para mayor información:cesar augusto sucerquia.</P> 
+     <P>Email: amoblados2@centralchat.Com.Co</P> 
+     <P>Celular: 321 813 57 39</P> 
+      <P> <%= link_to 'Más informacion', mas_informacions_path, :method=>"get" %></P> 
+
+
+      <table>
+        <thead>
+          <tr>
+            <th>Direccion</th>
+            <th>Barrio</th>
+            <th>Habitacion</th>
+            <th>Baño</th>
+            <th>Cocina</th>
+            <th>Sala</th>
+            <th>Comedor</th>
+            <th>Descripcion</th>
+            <th>Precio</th>
+            <th>Estado</th>
+            <th>Amoblado</th>
+            <th colspan="3"></th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <% @inicios.each do |inicio| %>
+            <tr>
+              <td><%= inicio.direccion %></td>
+              <td><%= inicio.barrio %></td>
+              <td><%= inicio.habitacion %></td>
+              <td><%= inicio.baño %></td>
+              <td><%= inicio.cocina %></td>
+              <td><%= inicio.sala %></td>
+              <td><%= inicio.comedor %></td>
+              <td><%= inicio.descripcion %></td>
+              <td><%= inicio.precio %></td>
+              <td><%= inicio.Estado %></td>
+              <td><%= inicio.amoblado %></td>
+              <td><%= link_to 'Show', inicio %></td>
+              <td><%= link_to 'Edit', edit_inicio_path(inicio) %></td>
+              <td><%= link_to 'Destroy', inicio, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+            </tr>
+          <% end %>
+        </tbody>
+      </table>
+
+      <br>
+
+      <%= link_to 'New Inicio', new_inicio_path %>
+
+</div>
