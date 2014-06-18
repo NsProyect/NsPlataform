@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Codigo:</strong>
+  <%= @reservation.aptcode %>
+</p>
+
+<p>
+  <strong>Nombre:</strong>
+  <%= @reservation.name %>
+</p>
+
+<p>
+  <strong>Tipo de Documento:</strong>
+  <%= @reservation.doctype %>
+</p>
+
+<p>
+  <strong>Documento:</strong>
+  <%= @reservation.doc %>
+</p>
+
+<p>
+  <strong>Fecha de Resevacion:</strong>
+  <%= @reservation.reservationDate %>
+</p>
+
+<p>
+  <strong>Correo:</strong>
+  <%= @reservation.mail %>
+</p>
+
+<%= link_to 'Editar', edit_reservation_path(@reservation) %> |
+<%= link_to 'Atras', reservations_path %>

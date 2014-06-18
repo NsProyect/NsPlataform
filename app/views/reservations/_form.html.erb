@@ -1,0 +1,41 @@
+<%= form_for(@reservation) do |f| %>
+  <% if @reservation.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@reservation.errors.count, "error") %> prohibited this reservation from being saved:</h2>
+
+      <ul>
+      <% @reservation.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :Codigo_Del_Apto %><br>
+    <%= f.text_field :aptcode %>
+  </div>
+  <div class="field">
+    <%= f.label :Nombre %><br>
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :Tipo_de_Documento %><br>
+    <%= f.text_field :doctype_id %>
+  </div>
+  <div class="field">
+    <%= f.label :Numero_de_Documento %><br>
+    <%= f.text_field :doc %>
+  </div>
+  <div class="field">
+    <%= f.label :Fecha_de_Reserva %><br>
+    <%= f.date_select :reservationDate %>
+  </div>
+  <div class="field">
+    <%= f.label :Correo %><br>
+    <%= f.text_field :mail %>
+  </div>
+  <div class="actions">
+    <%= f.submit "Guardar"%>
+  </div>
+<% end %>
