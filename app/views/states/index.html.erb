@@ -1,10 +1,10 @@
-<h1>Lista de Estados</h1>
+<h1>Listing states</h1>
 
 <table>
   <thead>
     <tr>
-      <th>Nombre</th>
-      <th>Descripcion</th>
+      <th>Name</th>
+      <th>Description</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -14,9 +14,9 @@
       <tr>
         <td><%= state.name %></td>
         <td><%= state.description %></td>
-        <td><%= link_to 'Ver', state %></td>
-        <td><%= link_to 'Editar', edit_state_path(state) %></td>
-        <td><%= link_to 'Destruir', state, method: :delete, data: { confirm: 'Esta Seguro?' } %></td>
+        <td><%= link_to 'Show', state %></td>
+        <td><%= link_to 'Edit', edit_state_path(state) %></td>
+        <td><%= link_to 'Destroy', state, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -24,4 +24,4 @@
 
 <br>
 
-<%= link_to 'Nuevo Estado', new_state_path %>
+<%= link_to 'New State', new_state_path %>

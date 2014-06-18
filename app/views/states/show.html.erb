@@ -1,14 +1,14 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Nombre:</strong>
+  <strong>Name:</strong>
   <%= @state.name %>
 </p>
 
 <p>
-  <strong>Descripcion:</strong>
+  <strong>Description:</strong>
   <%= @state.description %>
 </p>
 
-<%= link_to 'Editar', edit_state_path(@state) %> |
-<%= link_to 'Atras', states_path %>
+<%= link_to 'Edit', edit_state_path(@state) %> |
+<%= link_to 'Back', states_path %>

@@ -3935,7 +3935,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
     margin-right: 0;
   }
 }
-<<<<<<< HEAD
+
 .navbar-default1 {
   background-color: #dd4814;
   border-color: #bf3e11;
@@ -3988,8 +3988,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 .navbar-default1 .navbar-nav > .open > a,
 .navbar-default1 .navbar-nav > .open > a:hover,
 .navbar-default1 .navbar-nav > .open > a:focus {
-=======
-.navbar-default {
+
   background-color: #dd4814;
   border-color: #bf3e11;
 }
@@ -4041,12 +4040,10 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 .navbar-default .navbar-nav > .open > a,
 .navbar-default .navbar-nav > .open > a:hover,
 .navbar-default .navbar-nav > .open > a:focus {
->>>>>>> 8e063ec32ec67c74c9b06d5853689bd6ee1ce107
   background-color: #ae3910;
   color: #ffffff;
 }
 @media (max-width: 767px) {
-<<<<<<< HEAD
   .navbar-default1 .navbar-nav .open .dropdown-menu > li > a {
     color: #ffffff;
   }
@@ -4064,8 +4061,6 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   .navbar-default1 .navbar-nav .open .dropdown-menu > .disabled > a,
   .navbar-default1 .navbar-nav .open .dropdown-menu > .disabled > a:hover,
   .navbar-default1 .navbar-nav .open .dropdown-menu > .disabled > a:focus {
-=======
-  .navbar-default .navbar-nav .open .dropdown-menu > li > a {
     color: #ffffff;
   }
   .navbar-default .navbar-nav .open .dropdown-menu > li > a:hover,
@@ -4082,22 +4077,17 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   .navbar-default .navbar-nav .open .dropdown-menu > .disabled > a,
   .navbar-default .navbar-nav .open .dropdown-menu > .disabled > a:hover,
   .navbar-default .navbar-nav .open .dropdown-menu > .disabled > a:focus {
->>>>>>> 8e063ec32ec67c74c9b06d5853689bd6ee1ce107
     color: #cccccc;
     background-color: transparent;
   }
 }
-<<<<<<< HEAD
 .navbar-default1 .navbar-link {
   color: #ffffff;
 }
 .navbar-default1 .navbar-link:hover {
-=======
-.navbar-default .navbar-link {
   color: #ffffff;
 }
 .navbar-default .navbar-link:hover {
->>>>>>> 8e063ec32ec67c74c9b06d5853689bd6ee1ce107
   color: #ffffff;
 }
 .navbar-inverse {
@@ -5862,19 +5852,10 @@ button.close {
     display: none !important;
   }
 }
-<<<<<<< HEAD
 .navbar-default1 .badge {
-=======
-.navbar-default .badge {
->>>>>>> 8e063ec32ec67c74c9b06d5853689bd6ee1ce107
-  background-color: #fff;
   color: #dd4814;
 }
 .navbar-inverse .badge {
   background-color: #fff;
   color: #772953;
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> 8e063ec32ec67c74c9b06d5853689bd6ee1ce107

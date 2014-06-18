@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
-<<<<<<< HEAD
+
+  resources :reservations
+
   resources :inicios
 
   resources :estados
@@ -21,7 +23,7 @@ Rails.application.routes.draw do
   get 'static_pages/about'
 
   resources :reservas
-=======
+
   resources :doc_types
 
   resources :apartaments
@@ -29,7 +31,6 @@ Rails.application.routes.draw do
   resources :states
 
   resources :charges
->>>>>>> 8e063ec32ec67c74c9b06d5853689bd6ee1ce107
 
   resources :employees
 
@@ -37,11 +38,7 @@ Rails.application.routes.draw do
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-<<<<<<< HEAD
   root 'inicios#index'
-=======
-  root 'welcome#index'
->>>>>>> 8e063ec32ec67c74c9b06d5853689bd6ee1ce107
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

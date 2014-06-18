@@ -36,13 +36,10 @@ GEM
     bootstrap-sass (3.1.1.1)
       sass (~> 3.2)
     builder (3.2.2)
-<<<<<<< HEAD
     climate_control (0.0.3)
       activesupport (>= 3.0)
     cocaine (0.5.4)
       climate_control (>= 0.0.3, < 1.0)
-=======
->>>>>>> 8e063ec32ec67c74c9b06d5853689bd6ee1ce107
     coderay (1.1.0)
     coffee-rails (4.0.1)
       coffee-script (>= 2.2.0)
@@ -142,11 +139,8 @@ GEM
       execjs (>= 0.3.0)
       json (>= 1.8.0)
     will_paginate (3.0.5)
-<<<<<<< HEAD
     will_paginate-bootstrap (1.0.0)
       will_paginate (>= 3.0.3)
-=======
->>>>>>> 8e063ec32ec67c74c9b06d5853689bd6ee1ce107
 
 PLATFORMS
   ruby
@@ -158,11 +152,8 @@ DEPENDENCIES
   coffee-rails (~> 4.0.0)
   jbuilder (~> 2.0)
   jquery-rails
-<<<<<<< HEAD
   lazybox
   paperclip
-=======
->>>>>>> 8e063ec32ec67c74c9b06d5853689bd6ee1ce107
   quiet_assets
   rails (= 4.1.1)
   rails_layout
@@ -174,9 +165,5 @@ DEPENDENCIES
   therubyracer
   turbolinks
   uglifier (>= 1.3.0)
-<<<<<<< HEAD
-  will_paginate
-  will_paginate-bootstrap
-=======
   will_paginate (~> 3.0)
->>>>>>> 8e063ec32ec67c74c9b06d5853689bd6ee1ce107
+  will_paginate-bootstrap

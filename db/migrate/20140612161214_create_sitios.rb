@@ -6,6 +6,6 @@ class CreateSitios < ActiveRecord::Migration
 
       t.timestamps
     end
-    add_attachment :sitios, :image
+  
   end
 end
