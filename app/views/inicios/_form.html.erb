@@ -1,3 +1,4 @@
+<div class="jumbotron">
 <%= form_for(@inicio) do |f| %>
   <% if @inicio.errors.any? %>
     <div id="error_explanation">
@@ -29,15 +30,15 @@
   </div>
   <div class="field">
     <%= f.label :cocina %><br>
-    <%= f.text_field :cocina %>
+    <%= f.check_box :cocina %>
   </div>
   <div class="field">
     <%= f.label :sala %><br>
-    <%= f.text_field :sala %>
+    <%= f.check_box :sala %>
   </div>
   <div class="field">
     <%= f.label :comedor %><br>
-    <%= f.text_field :comedor %>
+    <%= f.check_box :comedor %>
   </div>
   <div class="field">
     <%= f.label :descripcion %><br>
@@ -55,7 +56,12 @@
     <%= f.label :amoblado %><br>
     <%= f.check_box :amoblado %>
   </div>
+  <div class="field">
+      <%= f.label :image %>
+      <%= f.file_field :image %>
+    </div>
   <div class="actions">
     <%= f.submit %>
   </div>
 <% end %>
+</div>
