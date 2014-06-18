@@ -1,0 +1,3 @@
+rails g scaffold apartment code:string address:string state:references room:string cost:string amenities:string
+
+rails g scaffold reservation aptocode:string name:string doctype:references doc:string mail:string reservaciondatein:date reservationdateout:date

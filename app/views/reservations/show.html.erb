@@ -1,8 +1,8 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Codigo:</strong>
-  <%= @reservation.aptcode %>
+  <strong>Codigo Apto:</strong>
+  <%= @reservation.aptocode %>
 </p>
 
 <p>
@@ -21,13 +21,18 @@
 </p>
 
 <p>
-  <strong>Fecha de Resevacion:</strong>
-  <%= @reservation.reservationDate %>
+  <strong>Correo:</strong>
+  <%= @reservation.mail %>
 </p>
 
 <p>
-  <strong>Correo:</strong>
-  <%= @reservation.mail %>
+  <strong>Fecha de Ingreso:</strong>
+  <%= @reservation.reservaciondatein %>
+</p>
+
+<p>
+  <strong>Fecha de Salida:</strong>
+  <%= @reservation.reservationdateout %>
 </p>
 
 <%= link_to 'Editar', edit_reservation_path(@reservation) %> |

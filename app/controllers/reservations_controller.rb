@@ -69,6 +69,6 @@ class ReservationsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def reservation_params
-      params.require(:reservation).permit(:aptcode, :name, :doctype_id, :doc, :reservationDate, :mail)
+      params.require(:reservation).permit(:aptocode, :name, :doctype_id, :doc, :mail, :reservaciondatein, :reservationdateout)
     end
 end

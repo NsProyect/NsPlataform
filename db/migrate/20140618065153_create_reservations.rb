@@ -1,12 +1,13 @@
 class CreateReservations < ActiveRecord::Migration
   def change
     create_table :reservations do |t|
-      t.string :aptcode
+      t.string :aptocode
       t.string :name
       t.references :doctype, index: true
       t.string :doc
-      t.date :reservationDate
       t.string :mail
+      t.date :reservaciondatein
+      t.date :reservationdateout
 
       t.timestamps
     end

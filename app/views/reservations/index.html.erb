@@ -1,14 +1,15 @@
-<h1>Reservaciones</h1>
+<h1>Reservas</h1>
 
 <table>
   <thead>
     <tr>
-      <th>Codigo</th>
+      <th>Codigo Apto</th>
       <th>Nombre</th>
       <th>Tipo de Documento</th>
       <th>Documento</th>
-      <th>Fecha de Reserva</th>
       <th>Correo</th>
+      <th>Fecha de Ingreso</th>
+      <th>Fecha de Salida</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -16,15 +17,16 @@
   <tbody>
     <% @reservations.each do |reservation| %>
       <tr>
-        <td><%= reservation.aptcode %></td>
+        <td><%= reservation.aptocode %></td>
         <td><%= reservation.name %></td>
         <td><%= reservation.doctype %></td>
         <td><%= reservation.doc %></td>
-        <td><%= reservation.reservationDate %></td>
         <td><%= reservation.mail %></td>
-        <td><%= link_to 'Ver', reservation %></td>
-        <td><%= link_to 'Editar', edit_reservation_path(reservation) %></td>
-        <td><%= link_to 'Destruir', reservation, method: :delete, data: { confirm: 'Esta Seguro?' } %></td>
+        <td><%= reservation.reservaciondatein %></td>
+        <td><%= reservation.reservationdateout %></td>
+        <td><%= link_to 'Show', reservation %></td>
+        <td><%= link_to 'Edit', edit_reservation_path(reservation) %></td>
+        <td><%= link_to 'Destroy', reservation, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -32,4 +34,4 @@
 
 <br>
 
-<%= link_to 'Nueva Reservacion', new_reservation_path %>
+<%= link_to 'Nueva Reserva', new_reservation_path %>

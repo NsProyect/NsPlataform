@@ -37,7 +37,6 @@ gem 'spring',        group: :development
 
 # Use debugger
 # gem 'debugger', group: [:development, :test]
-
 group :development do
 gem 'better_errors'
 gem 'binding_of_caller', :platforms=>[:mri_19, :mri_20, :rbx]
@@ -56,3 +55,5 @@ gem 'will_paginate','~> 3.0'
 gem 'bootstrap-sass'
 
 gem 'simple_form'
+
+gem 'sorcery'

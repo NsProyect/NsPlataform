@@ -69,6 +69,6 @@ class IniciosController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def inicio_params
-      params.require(:inicio).permit(:direccion, :barrio, :habitacion, :baño, :cocina, :sala, :comedor, :descripcion, :precio, :Estado_id, :amoblado)
+      params.require(:inicio).permit(:direccion, :barrio, :habitacion, :baño, :cocina, :sala, :comedor, :descripcion, :precio, :Estado_id, :amoblado, :image)
     end
 end

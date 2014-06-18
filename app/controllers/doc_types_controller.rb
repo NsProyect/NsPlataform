@@ -28,7 +28,7 @@ class DocTypesController < ApplicationController
 
     respond_to do |format|
       if @doc_type.save
-        format.html { redirect_to @doc_type, notice: 'Documento Creado Satisfactoriamente.' }
+        format.html { redirect_to @doc_type, notice: 'Documento Creado.' }
         format.json { render :show, status: :created, location: @doc_type }
       else
         format.html { render :new }
@@ -42,7 +42,7 @@ class DocTypesController < ApplicationController
   def update
     respond_to do |format|
       if @doc_type.update(doc_type_params)
-        format.html { redirect_to @doc_type, notice: 'Documento Actualizado Satisfactoriamente.' }
+        format.html { redirect_to @doc_type, notice: 'Documento Actualizado.' }
         format.json { render :show, status: :ok, location: @doc_type }
       else
         format.html { render :edit }
@@ -56,7 +56,7 @@ class DocTypesController < ApplicationController
   def destroy
     @doc_type.destroy
     respond_to do |format|
-      format.html { redirect_to doc_types_url, notice: 'Documento Eliminado Satisfactoriamente.' }
+      format.html { redirect_to doc_types_url, notice: 'Documento Eliminado.' }
       format.json { head :no_content }
     end
   end

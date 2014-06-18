@@ -11,7 +11,24 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140618043520) do
+ActiveRecord::Schema.define(version: 20140618065405) do
+
+  create_table "apartments", force: true do |t|
+    t.string   "code"
+    t.string   "address"
+    t.integer  "state_id"
+    t.string   "room"
+    t.string   "cost"
+    t.string   "amenities"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "image_file_name"
+    t.string   "image_content_type"
+    t.integer  "image_file_size"
+    t.datetime "image_updated_at"
+  end
+
+  add_index "apartments", ["state_id"], name: "index_apartments_on_state_id"
 
   create_table "charges", force: true do |t|
     t.string   "name"
@@ -53,12 +70,6 @@ ActiveRecord::Schema.define(version: 20140618043520) do
     t.datetime "updated_at"
   end
 
-  create_table "galeria", force: true do |t|
-    t.string   "index"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
 # Could not dump table "inicios" because of following NoMethodError
 #   undefined method `[]' for nil:NilClass
 
@@ -79,29 +90,21 @@ ActiveRecord::Schema.define(version: 20140618043520) do
   end
 
   create_table "reservations", force: true do |t|
-    t.string   "aptcode"
+    t.string   "aptocode"
     t.string   "name"
     t.integer  "doctype_id"
     t.string   "doc"
-    t.date     "reservationDate"
     t.string   "mail"
+    t.date     "reservaciondatein"
+    t.date     "reservationdateout"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
   add_index "reservations", ["doctype_id"], name: "index_reservations_on_doctype_id"
 
-  create_table "sitios", force: true do |t|
-    t.string   "nombre"
-    t.text     "descripcion"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-    t.string   "image_file_name"
-    t.string   "image_content_type"
-    t.integer  "image_file_size"
-    t.datetime "image_updated_at"
-    t.string   "direccion"
-  end
+# Could not dump table "sitios" because of following NoMethodError
+#   undefined method `[]' for nil:NilClass
 
   create_table "states", force: true do |t|
     t.string   "name"

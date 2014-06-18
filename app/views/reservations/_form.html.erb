@@ -12,8 +12,8 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :Codigo_Del_Apto %><br>
-    <%= f.text_field :aptcode %>
+    <%= f.label :Codigo %><br>
+    <%= f.text_field :aptocode %>
   </div>
   <div class="field">
     <%= f.label :Nombre %><br>
@@ -28,14 +28,18 @@
     <%= f.text_field :doc %>
   </div>
   <div class="field">
-    <%= f.label :Fecha_de_Reserva %><br>
-    <%= f.date_select :reservationDate %>
-  </div>
-  <div class="field">
     <%= f.label :Correo %><br>
     <%= f.text_field :mail %>
   </div>
+  <div class="field">
+    <%= f.label :Fecha_de_Ingreso %><br>
+    <%= f.date_select :reservaciondatein %>
+  </div>
+  <div class="field">
+    <%= f.label :Fecha_de_Salida %><br>
+    <%= f.date_select :reservationdateout %>
+  </div>
   <div class="actions">
-    <%= f.submit "Guardar"%>
+    <%= f.submit "Guardar" %>
   </div>
 <% end %>

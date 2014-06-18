@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  resources :apartments
+
   resources :reservations
 
   resources :inicios
@@ -39,6 +41,7 @@ Rails.application.routes.draw do
 
   # You can have the root of your site routed with "root"
   root 'inicios#index'
+
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

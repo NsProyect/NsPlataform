@@ -1,17 +1,19 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  aptcode: MyString
+  aptocode: MyString
   name: MyString
   doctype_id: 
   doc: MyString
-  reservationDate: 2014-06-17
   mail: MyString
+  reservaciondatein: 2014-06-18
+  reservationdateout: 2014-06-18
 
 two:
-  aptcode: MyString
+  aptocode: MyString
   name: MyString
   doctype_id: 
   doc: MyString
-  reservationDate: 2014-06-17
   mail: MyString
+  reservaciondatein: 2014-06-18
+  reservationdateout: 2014-06-18

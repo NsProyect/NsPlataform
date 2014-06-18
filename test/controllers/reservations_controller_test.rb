@@ -18,7 +18,7 @@ class ReservationsControllerTest < ActionController::TestCase
 
   test "should create reservation" do
     assert_difference('Reservation.count') do
-      post :create, reservation: { aptcode: @reservation.aptcode, doc: @reservation.doc, doctype_id: @reservation.doctype_id, mail: @reservation.mail, name: @reservation.name, reservationDate: @reservation.reservationDate }
+      post :create, reservation: { aptocode: @reservation.aptocode, doc: @reservation.doc, doctype_id: @reservation.doctype_id, mail: @reservation.mail, name: @reservation.name, reservaciondatein: @reservation.reservaciondatein, reservationdateout: @reservation.reservationdateout }
     end
 
     assert_redirected_to reservation_path(assigns(:reservation))
@@ -35,7 +35,7 @@ class ReservationsControllerTest < ActionController::TestCase
   end
 
   test "should update reservation" do
-    patch :update, id: @reservation, reservation: { aptcode: @reservation.aptcode, doc: @reservation.doc, doctype_id: @reservation.doctype_id, mail: @reservation.mail, name: @reservation.name, reservationDate: @reservation.reservationDate }
+    patch :update, id: @reservation, reservation: { aptocode: @reservation.aptocode, doc: @reservation.doc, doctype_id: @reservation.doctype_id, mail: @reservation.mail, name: @reservation.name, reservaciondatein: @reservation.reservaciondatein, reservationdateout: @reservation.reservationdateout }
     assert_redirected_to reservation_path(assigns(:reservation))
   end
 
