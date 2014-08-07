@@ -19,7 +19,7 @@
       <tr>
         <td><%= reservation.aptocode %></td>
         <td><%= reservation.name %></td>
-        <td><%= reservation.doctype %></td>
+        <td><%= reservation.doctype.name rescue nil%></td>
         <td><%= reservation.doc %></td>
         <td><%= reservation.mail %></td>
         <td><%= reservation.reservaciondatein %></td>

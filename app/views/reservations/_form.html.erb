@@ -20,8 +20,12 @@
     <%= f.text_field :name %>
   </div>
   <div class="field">
-    <%= f.label :Tipo_de_Documento %><br>
-    <%= f.text_field :doctype_id %>
+    Tipo de Documento <br>
+    <%= f.collection_select :doctype_id, 
+    DocType.all, 
+    :id, 
+    :name, 
+    class: "form-control", prompt: "Seleccione Tipo de Documento" %>
   </div>
   <div class="field">
     <%= f.label :Numero_de_Documento %><br>

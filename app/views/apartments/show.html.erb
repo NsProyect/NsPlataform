@@ -12,7 +12,7 @@
 
 <p>
   <strong>Estado:</strong>
-  <%= @apartment.state %>
+  <%= @apartment.state.name %>
 </p>
 
 <p>
@@ -32,7 +32,7 @@
 
 <p>
   <strong>Galeria:</strong>
-  <%= image_tag @product.image.url(:medium) %>
+  <%= image_tag @apartment.image.url(:medium) %>
 </p>
 
 
