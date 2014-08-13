@@ -1,0 +1,2 @@
+module MasInformacionsHelper
+end

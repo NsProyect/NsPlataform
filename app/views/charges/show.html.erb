@@ -1,0 +1,9 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Nombre:</strong>
+  <%= @charge.name %>
+</p>
+
+<%= link_to 'Editar', edit_charge_path(@charge) %> |
+<%= link_to 'Atras', charges_path %>

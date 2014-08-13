@@ -19,27 +19,26 @@
     <%= f.label :Apellido %><br>
     <%= f.text_field :lastName %>
   </div>
+  
   <div class="field">
     <%= f.label :Documento %><br>
-    <%= f.text_field :document %>
+    <%= f.text_field :doc %>
   </div>
-  <div class="field">
-    <%= f.label :Cargo %><br>
-    <%= f.text_field :charge %>
+  <div class="field"> 
+    Cargo <br>
+    <%= f.collection_select :charge_id, Charge.all, :id, :name, class: "form-control", prompt: 
+    "Seleccione Cargo" %> 
   </div>
   <div class="field">
     <%= f.label :Contraseña %><br>
     <%= f.text_field :password %>
   </div>
   <div class="field">
-    <%= f.label :Email %><br>
-    <%= f.text_field :email %>
+    <%= f.label :Correo %><br>
+    <%= f.text_field :mail %>
   </div>
-  <div class="field">
-    <%= f.label :Usuario %><br>
-    <%= f.text_field :nickName %>
-  </div>
+  
   <div class="actions">
-    <%= f.submit "Guardar" %>
+    <%= f.submit "Guardar"%>
   </div>
 <% end %>

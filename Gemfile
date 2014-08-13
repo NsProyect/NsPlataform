@@ -37,11 +37,23 @@ gem 'spring',        group: :development
 
 # Use debugger
 # gem 'debugger', group: [:development, :test]
-gem 'bootstrap-sass'
-
 group :development do
 gem 'better_errors'
 gem 'binding_of_caller', :platforms=>[:mri_19, :mri_20, :rbx]
 gem 'quiet_assets'
 gem 'rails_layout'
 end
+
+gem 'lazybox'
+
+gem 'paperclip'
+
+gem 'will_paginate-bootstrap'
+
+gem 'will_paginate','~> 3.0'
+
+gem 'bootstrap-sass'
+
+gem 'simple_form'
+
+gem 'sorcery'

@@ -1,4 +1,21 @@
 Rails.application.routes.draw do
+
+  resources :ipqrs
+
+  resources :users
+
+  resources :apartments
+
+  resources :reservations
+
+  resources :inicios
+
+  resources :estados
+
+  resources :mas_informacions
+
+  resources :sitios
+
   get 'galeria/index'
 
   get 'contactos/index'
@@ -13,13 +30,22 @@ Rails.application.routes.draw do
 
   resources :reservas
 
+  resources :doc_types
+
+  resources :apartments
+
+  resources :states
+
+  resources :charges
+
   resources :employees
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-  root 'inicio#index'
+  root 'static_pages#home#index'
+
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

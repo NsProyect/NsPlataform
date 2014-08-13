@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  aptocode: MyString
+  name: MyString
+  doctype_id: 
+  doc: MyString
+  mail: MyString
+  reservaciondatein: 2014-06-18
+  reservationdateout: 2014-06-18
+
+two:
+  aptocode: MyString
+  name: MyString
+  doctype_id: 
+  doc: MyString
+  mail: MyString
+  reservaciondatein: 2014-06-18
+  reservationdateout: 2014-06-18

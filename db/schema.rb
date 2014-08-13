@@ -11,7 +11,28 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140610161040) do
+ActiveRecord::Schema.define(version: 20140812072159) do
+
+  create_table "apartments", force: true do |t|
+    t.string   "code"
+    t.string   "address"
+    t.integer  "state_id"
+    t.string   "room"
+    t.string   "cost"
+    t.string   "amenities"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "image_file_name"
+    t.string   "image_content_type"
+    t.integer  "image_file_size"
+    t.datetime "image_updated_at"
+  end
+
+  create_table "charges", force: true do |t|
+    t.string   "name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "contactos", force: true do |t|
     t.string   "index"
@@ -19,26 +40,46 @@ ActiveRecord::Schema.define(version: 20140610161040) do
     t.datetime "updated_at"
   end
 
+  create_table "doc_types", force: true do |t|
+    t.string   "abbrev"
+    t.string   "name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "employees", force: true do |t|
     t.string   "name"
     t.string   "lastName"
-    t.string   "document"
-    t.string   "charge"
+    t.string   "doc"
+    t.integer  "charge_id"
     t.string   "password"
-    t.string   "email"
+    t.string   "mail"
     t.string   "nickName"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
-  create_table "galeria", force: true do |t|
-    t.string   "index"
+  add_index "employees", ["charge_id"], name: "index_employees_on_charge_id"
+
+  create_table "estados", force: true do |t|
+    t.string   "nombre"
+    t.text     "descripcion"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
-  create_table "inicios", force: true do |t|
-    t.string   "index"
+# Could not dump table "inicios" because of following NoMethodError
+#   undefined method `[]' for nil:NilClass
+
+  create_table "ipqrs", force: true do |t|
+    t.string   "name"
+    t.string   "mail"
+    t.text     "comments"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "mas_informacions", force: true do |t|
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -53,5 +94,39 @@ ActiveRecord::Schema.define(version: 20140610161040) do
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
+  create_table "reservations", force: true do |t|
+    t.string   "aptocode"
+    t.string   "name"
+    t.integer  "doctype_id"
+    t.string   "doc"
+    t.string   "mail"
+    t.date     "reservaciondatein"
+    t.date     "reservationdateout"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "reservations", ["doctype_id"], name: "index_reservations_on_doctype_id"
+
+# Could not dump table "sitios" because of following NoMethodError
+#   undefined method `[]' for nil:NilClass
+
+  create_table "states", force: true do |t|
+    t.string   "name"
+    t.text     "description"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "users", force: true do |t|
+    t.string   "email",            null: false
+    t.string   "crypted_password", null: false
+    t.string   "salt",             null: false
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "users", ["email"], name: "index_users_on_email", unique: true
 
 end

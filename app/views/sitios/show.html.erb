@@ -1,0 +1,24 @@
+<div class="jumbotron">
+	<p id="notice"><%= notice %></p>
+
+	<%= image_tag @sitio.image.url(:medium) %>
+
+	<br>
+	<p>
+	  <strong>Nombre:</strong>
+	  <%= @sitio.nombre %>
+	</p>
+
+	<p>
+	  <strong>Descripcion:</strong>
+	  <%= @sitio.descripcion %>
+	</p>
+
+	<p>
+	  <strong>Direccion:</strong>
+	  <%= @sitio.direccion %>
+	</p>
+
+	<%= link_to 'Editar', edit_sitio_path(@sitio) %> |
+	<%= link_to 'Atras', sitios_path %>
+</div>

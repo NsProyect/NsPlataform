@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  code: MyString
+  address: MyString
+  state_id: 
+  room: MyString
+  cost: MyString
+  amenities: MyString
+
+two:
+  code: MyString
+  address: MyString
+  state_id: 
+  room: MyString
+  cost: MyString
+  amenities: MyString

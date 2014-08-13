@@ -12,28 +12,19 @@
 
 <p>
   <strong>Documento:</strong>
-  <%= @employee.document %>
+  <%= @employee.doc %>
 </p>
 
 <p>
   <strong>Cargo:</strong>
-  <%= @employee.charge %>
+  <%= @employee.charge.name %>
 </p>
 
 <p>
-  <strong>Contraseña:</strong>
-  <%= @employee.password %>
+  <strong>Mail:</strong>
+  <%= @employee.mail %>
 </p>
 
-<p>
-  <strong>Email:</strong>
-  <%= @employee.email %>
-</p>
-
-<p>
-  <strong>Usuario:</strong>
-  <%= @employee.nickName %>
-</p>
 
 <%= link_to 'Editar', edit_employee_path(@employee) %> |
 <%= link_to 'Atras', employees_path %>

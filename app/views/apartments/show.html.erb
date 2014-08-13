@@ -1,0 +1,40 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Codigo:</strong>
+  <%= @apartment.code %>
+</p>
+
+<p>
+  <strong>Direccion:</strong>
+  <%= @apartment.address %>
+</p>
+
+<p>
+  <strong>Estado:</strong>
+  <%= @apartment.state.name %>
+</p>
+
+<p>
+  <strong>Habitacion:</strong>
+  <%= @apartment.room %>
+</p>
+
+<p>
+  <strong>Costo:</strong>
+  <%= @apartment.cost %>
+</p>
+
+<p>
+  <strong>Comodidades:</strong>
+  <%= @apartment.amenities %>
+</p>
+
+<p>
+  <strong>Galeria:</strong>
+  <%= image_tag @apartment.image.url(:medium) %>
+</p>
+
+
+<%= link_to 'Editar', edit_apartment_path(@apartment) %> |
+<%= link_to 'Atras', apartments_path %>

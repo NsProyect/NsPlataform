@@ -1,0 +1,29 @@
+<%= form_for(@ipqr) do |f| %>
+  <% if @ipqr.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@ipqr.errors.count, "error") %> prohibited this ipqr from being saved:</h2>
+
+      <ul>
+      <% @ipqr.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :Nombre %><br>
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :Correo %><br>
+    <%= f.text_field :mail %>
+  </div>
+  <div class="field">
+    <%= f.label :Comentario %><br>
+    <%= f.text_area :comments %>
+  </div>
+  <div class="actions">
+    <%= f.submit "Enviar"%>
+  </div>
+<% end %>
