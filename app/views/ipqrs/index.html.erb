@@ -17,8 +17,6 @@
         <td><%= ipqr.mail %></td>
         <td><%= ipqr.comments %></td>
         <td><%= link_to 'Show', ipqr %></td>
-        <td><%= link_to 'Edit', edit_ipqr_path(ipqr) %></td>
-        <td><%= link_to 'Destroy', ipqr, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -26,4 +24,3 @@
 
 <br>
 
-<%= link_to 'Nueva Ipqr', new_ipqr_path %>
