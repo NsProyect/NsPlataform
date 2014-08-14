@@ -1,0 +1,45 @@
+<%= form_for @apartment, :url => apartments_path, :html => { :multipart => true } do |f| %>
+  <% if @apartment.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@apartment.errors.count, "error") %> prohibited this apartment from being saved:</h2>
+
+      <ul>
+      <% @apartment.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :Codigo %><br>
+    <%= f.text_field :code %>
+  </div>
+  <div class="field">
+    <%= f.label :Direccion %><br>
+    <%= f.text_field :address %>
+  </div>
+  <div class="field">
+    Estado <br>
+    <%= f.collection_select :state_id, State.all, :id, :name, class: "form-control", prompt: "Seleccione Estado" %>
+  </div>
+  <div class="field">
+    <%= f.label :Habitaciones %><br>
+    <%= f.text_field :room %>
+  </div>
+  <div class="field">
+    <%= f.label :Costo %><br>
+    <%= f.text_field :cost %>
+  </div>
+  <div class="field">
+    <%= f.label :Comodidades %><br>
+    <%= f.text_field :amenities %>
+  </div>
+  <div class="field">
+    <%= f.label :Galeria %>
+    <%= f.file_field :image %>
+  </div>
+  <div class="actions">
+    <%= f.submit "Guardar" %>
+  </div>
+<% end %>

@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Codigo Apto:</strong>
+  <%= @reservation.aptocode %>
+</p>
+
+<p>
+  <strong>Nombre:</strong>
+  <%= @reservation.name %>
+</p>
+
+<p>
+  <strong>Tipo de Documento:</strong>
+  <%= @reservation.doctype.name %>
+</p>
+
+<p>
+  <strong>Documento:</strong>
+  <%= @reservation.doc %>
+</p>
+
+<p>
+  <strong>Correo:</strong>
+  <%= @reservation.mail %>
+</p>
+
+<p>
+  <strong>Fecha de Ingreso:</strong>
+  <%= @reservation.reservaciondatein %>
+</p>
+
+<p>
+  <strong>Fecha de Salida:</strong>
+  <%= @reservation.reservationdateout %>
+</p>
+
+<%= link_to 'Editar', edit_reservation_path(@reservation) %> |
+<%= link_to 'Atras', reservations_path %>

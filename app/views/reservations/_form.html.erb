@@ -1,0 +1,49 @@
+<%= form_for(@reservation) do |f| %>
+  <% if @reservation.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@reservation.errors.count, "error") %> prohibited this reservation from being saved:</h2>
+
+      <ul>
+      <% @reservation.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :Codigo %><br>
+    <%= f.text_field :aptocode %>
+  </div>
+  <div class="field">
+    <%= f.label :Nombre %><br>
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    Tipo de Documento <br>
+    <%= f.collection_select :doctype_id, 
+    DocType.all, 
+    :id, 
+    :name, 
+    class: "form-control", prompt: "Seleccione Tipo de Documento" %>
+  </div>
+  <div class="field">
+    <%= f.label :Numero_de_Documento %><br>
+    <%= f.text_field :doc %>
+  </div>
+  <div class="field">
+    <%= f.label :Correo %><br>
+    <%= f.text_field :mail %>
+  </div>
+  <div class="field">
+    <%= f.label :Fecha_de_Ingreso %><br>
+    <%= f.date_select :reservaciondatein %>
+  </div>
+  <div class="field">
+    <%= f.label :Fecha_de_Salida %><br>
+    <%= f.date_select :reservationdateout %>
+  </div>
+  <div class="actions">
+    <%= f.submit "Guardar" %>
+  </div>
+<% end %>

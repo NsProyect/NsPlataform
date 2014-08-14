@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  nombre: MyString
+  email: MyString
+  fecha_ingreso: 2014-06-09
+  fecha_salida: 2014-06-09
+  apartamento: MyString
+  hostal: MyString
+
+two:
+  nombre: MyString
+  email: MyString
+  fecha_ingreso: 2014-06-09
+  fecha_salida: 2014-06-09
+  apartamento: MyString
+  hostal: MyString

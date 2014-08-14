@@ -1,0 +1,7 @@
+<td><%= employee.name %></td>
+<td><%= employee.lastName %></td>
+<td><%= employee.document %></td>
+<td><%= employee.charge %></td>
+<td><%= employee.password %></td>
+<td><%= employee.email %></td>
+<td><%= employee.nickName %></td>
