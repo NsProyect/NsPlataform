@@ -16,7 +16,7 @@
 </p>
 
 <p>
-  <strong>Habitacion:</strong>
+  <strong>Habitaciones:</strong>
   <%= @apartment.room %>
 </p>
 
@@ -34,7 +34,7 @@
   <strong>Galeria:</strong>
   <%= image_tag @apartment.image.url(:medium) %>
 </p>
-
+<%= link_to "Reservar", new_reservation_path %>
 
 <%= link_to 'Editar', edit_apartment_path(@apartment) %> |
 <%= link_to 'Atras', apartments_path %>
