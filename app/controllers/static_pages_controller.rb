@@ -1,5 +1,8 @@
 class StaticPagesController < ApplicationController
   def home
+     
+      @apartments = Apartment.all
+
   end
 
   def help
