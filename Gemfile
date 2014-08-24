@@ -57,3 +57,5 @@ gem 'bootstrap-sass'
 gem 'simple_form'
 
 gem 'sorcery'
+
+gem 'ransack'

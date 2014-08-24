@@ -1,9 +1,10 @@
 class Employee < ActiveRecord::Base
 	belongs_to :charge
-	def self.search(search, page) 
+	def self.search(search, page)
 		where(['upper(name) like ?',
-		"%#{search}%".upcase]).paginate(page: page, per_page: 6).order("name") 
+		"%#{search}%".upcase]).paginate(page: page, per_page: 2).order("name")
 	end
+	
 
 
 	# Validar que los atributos sean obligatorios
