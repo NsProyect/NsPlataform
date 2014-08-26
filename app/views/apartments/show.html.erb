@@ -6,13 +6,13 @@
 </p>
 
 <p>
-  <strong>Direccion:</strong>
-  <%= @apartment.address %>
+  <strong>Estado:</strong>
+  <%= @apartment.state.name %>
 </p>
 
 <p>
-  <strong>Estado:</strong>
-  <%= @apartment.state.name %>
+  <strong>Direccion:</strong>
+  <%= @apartment.address %>
 </p>
 
 <p>
@@ -31,10 +31,10 @@
 </p>
 
 <p>
-  <strong>Galeria:</strong>
   <%= image_tag @apartment.image.url(:medium) %>
 </p>
-<%= link_to "Reservar", new_reservation_path %>
+<%= link_to "Reservar", new_reservation_path, :class => "btn btn-info btn-xs" %><br><br>
+<%= link_to 'Atras', static_pages_home_path, :class => "btn btn-success btn-xs"  %><br>
 
 <%= link_to 'Editar', edit_apartment_path(@apartment) %> |
 <%= link_to 'Atras', apartments_path %>
