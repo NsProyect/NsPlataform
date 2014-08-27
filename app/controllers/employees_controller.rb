@@ -5,9 +5,7 @@ class EmployeesController < ApplicationController
   # GET /employees.json
   def index
     #@employees = Employee.all
-    
     @employees = Employee.search(params[:search], params[:page])
-    
   end
 
   # GET /employees/1
@@ -22,36 +20,20 @@ class EmployeesController < ApplicationController
 
   # GET /employees/1/edit
   def edit
+    @employees = Employee.find(params[:id])
   end
 
   # POST /employees
   # POST /employees.json
   def create
-    @employee = Employee.new(employee_params)
-
-    respond_to do |format|
-      if @employee.save
-        format.html { redirect_to @employee, notice: 'Empleado Creado.' }
-        format.json { render :show, status: :created, location: @employee }
-      else
-        format.html { render :new }
-        format.json { render json: @employee.errors, status: :unprocessable_entity }
-      end
-    end
+    @employee = Employee.new(employee_params) 
+    render action: :new unless @employee.save 
   end
 
   # PATCH/PUT /employees/1
   # PATCH/PUT /employees/1.json
   def update
-    respond_to do |format|
-      if @employee.update(employee_params)
-        format.html { redirect_to @employee, notice: 'Empleado Modificado.' }
-        format.json { render :show, status: :ok, location: @employee }
-      else
-        format.html { render :edit }
-        format.json { render json: @employee.errors, status: :unprocessable_entity }
-      end
-    end
+    render action: :edit unless @employee.update_attributes(employee_params) 
   end
 
   # DELETE /employees/1
