@@ -16,9 +16,9 @@
 
   <tbody>
     <% @apartments.each do |apartment| %>
-     
+
         <th><%= image_tag apartment.image.url(:thumb) %><%= apartment.amenities %><br><%= link_to "ver", apartment_path(apartment), :class => "btn btn-success btn-xs"%></th>
-   
-    <% end %>
+        <th><%= image_tag apartment.image.url(:thumb) %><%= apartment.amenities %><br><%= link_to "ver", apartment_path(apartment)%></th>
+
   </tbody>
 </table>

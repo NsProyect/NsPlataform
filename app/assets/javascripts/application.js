@@ -14,10 +14,7 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require bootstrap
-<<<<<<< HEAD
 //= require lazybox
-=======
->>>>>>> 8e063ec32ec67c74c9b06d5853689bd6ee1ce107
 //= require_tree .
 
 $(document).on('ready page:load', function () {
