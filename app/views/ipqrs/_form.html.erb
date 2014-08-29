@@ -10,7 +10,7 @@
       </ul>
     </div>
   <% end %>
-
+<div class="jumbotron">
   <div class="field">
     <%= f.label :Nombre %><br>
     <%= f.text_field :name %>
@@ -24,6 +24,7 @@
     <%= f.text_area :comments %>
   </div>
   <div class="actions">
-    <%= f.submit "Enviar"%>
+    <%= f.submit "Enviar",class: "btn btn-primary"%>
   </div>
+ </div> 
 <% end %>
