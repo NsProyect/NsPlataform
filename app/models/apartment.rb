@@ -1,4 +1,5 @@
 class Apartment < ActiveRecord::Base
+  has_many :reservations
   belongs_to :state
   
   has_attached_file :image, :styles => { :medium => "300x300>", :thumb => "200x200>" }, 

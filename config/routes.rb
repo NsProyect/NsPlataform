@@ -6,29 +6,7 @@ Rails.application.routes.draw do
 
   resources :apartments
 
-  resources :reservations
-
-  resources :inicios
-
-  resources :estados
-
-  resources :mas_informacions
-
   resources :sitios
-
-  get 'galeria/index'
-
-  get 'contactos/index'
-
-  get 'static_pages/home'
-
-  get 'static_pages/help'
-
-  get 'static_pages/contact'
-
-  get 'static_pages/about'
-
-  resources :reservas
 
   resources :doc_types
 
@@ -39,6 +17,23 @@ Rails.application.routes.draw do
   resources :charges
 
   resources :employees
+
+  resources :apartments do 
+    resources :reservations 
+  end
+
+  get 'galeria/index'
+
+  get 'contactos/index'
+
+  get 'static_pages/home'
+
+  get 'static_pages/help'
+
+  get 'static_pages/about'
+
+  get 'allreservations/', to: 'reservations#allreservations', as: 'reservations'
+  
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
