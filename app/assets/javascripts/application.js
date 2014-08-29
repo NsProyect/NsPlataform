@@ -16,6 +16,7 @@
 //= require bootstrap
 //= require lazybox
 //= require_tree .
+//= require bootstrap-datepicker
 
 $(document).on('ready page:load', function () {
      $.lazybox.settings={ cancelClass: "pure-button", submitClass: 'pure-button pure-button-primary' }

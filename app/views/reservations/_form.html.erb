@@ -37,11 +37,23 @@
   </div>
   <div class="field">
     <%= f.label :Fecha_de_Ingreso %><br>
-    <%= f.date_select :reservaciondatein %>
+    <%= f.text_field :reservaciondatein, class: 'datepicker' %>
+    <script type="text/javascript">
+      $('.datepicker').datepicker({
+        language: "es",
+        format: "yyyy/mm/dd"
+        });
+    </script>
   </div>
   <div class="field">
     <%= f.label :Fecha_de_Salida %><br>
-    <%= f.date_select :reservationdateout %>
+    <%= f.text_field :reservationdateout, class: 'datepicker' %>
+    <script type="text/javascript">
+      $('.datepicker').datepicker({
+        language: "es",
+        format: "yyyy/mm/dd"
+      });
+    </script>
   </div>
   <div class="actions">
     <%= f.submit "Guardar" %>
