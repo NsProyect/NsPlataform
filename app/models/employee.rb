@@ -15,8 +15,8 @@ validates :mail, :presence => true
 # validar que un atributos unicos
 validates :doc, uniqueness: { message: "No se puede Repetir" }
 validates :mail, uniqueness: { message: "No se puede Repetir" }
-# validar formato de un email
-validates :mail, format: { with: /\A([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})\Z/i,
-message: 'Formato no valido' }
+
+
+
 
 end
