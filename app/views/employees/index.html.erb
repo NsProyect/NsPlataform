@@ -28,7 +28,6 @@ Buscador:
 </table>
 
 <br>
-
 <%= link_to 'Nuevo Empleado', new_employee_path, remote: true , class: "btn btn-primary"%>
  <br>
 <%= will_paginate @employees, renderer: BootstrapPagination::Rails %>

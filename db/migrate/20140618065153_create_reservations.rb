@@ -8,6 +8,7 @@ class CreateReservations < ActiveRecord::Migration
       t.string :mail
       t.date :reservaciondatein
       t.date :reservationdateout
+      t.references :apartment
 
       t.timestamps
     end
