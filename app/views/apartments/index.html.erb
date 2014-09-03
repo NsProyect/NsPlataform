@@ -4,22 +4,20 @@
   <thead>
     <tr>
       <th>Reserva</th>
-      <th>Codigo</th>
       <th>Direccion</th>
       <th>Estado</th>
       <th>Hablitaciones</th>
       <th>Costo</th>
       <th>Comodidades</th>
       <th>Galeria</th>
-      <th colspan="3"></th>
+      <th colspan="3">Opciones</th>
     </tr>
   </thead>
 
   <tbody>
     <% @apartments.each do |apartment| %>
       <tr>
-        <td><%= link_to "Reservar", apartment_reservations_path(apartment) %></td> 
-        <td><%= apartment.code %></td>
+        <td><%= link_to "Reservar", apartment_reservations_path(apartment) %></td>
         <td><%= apartment.address %></td>
         <td><%= apartment.state.name rescue nil%></td>
         <td><%= apartment.room %></td>

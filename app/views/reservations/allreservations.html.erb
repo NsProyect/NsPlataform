@@ -10,7 +10,7 @@
       <th>Apartamento</th>
       <th>Fecha de Ingreso</th>
       <th>Fecha de Salida</th>
-      <th colspan="3"></th>
+      <th colspan="3">Opciones</th>
     </tr>
   </thead>
 
@@ -21,7 +21,7 @@
         <td><%= reservation.doctype.name rescue nil%></td>
         <td><%= reservation.doc %></td>
         <td><%= reservation.mail %></td>
-        <td><%= reservation.apartment_id %></td>
+        <td>N°: <%= reservation.apartment_id %></td>
         <td><%= reservation.reservaciondatein %></td>
         <td><%= reservation.reservationdateout %></td>
         

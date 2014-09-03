@@ -5,17 +5,18 @@
 
 
 <p>Calendario de reservas y galerias de apartamentos y del hostal</p>
+<div class="aptoHome">
+  <table class="table table-striped table-hover ">
+    <thead>
+      <tr>
+        <th></th>
+      </tr>
+    </thead>
 
-<table class="table table-striped table-hover ">
-  <thead>
-    <tr>
-      <th></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @apartments.each do |apartment| %>
-        <th><%= image_tag apartment.image.url(:thumb) %><%= apartment.amenities %><br><%= link_to "ver", apartment_path(apartment), :class => "btn btn-success btn-xs"%></th>
-    <% end %>
-  </tbody>
-</table>
+    <tbody>
+      <% @apartments.each do |apartment| %>
+          <th><%= image_tag apartment.image.url(:thumb) %><%= apartment.amenities %><br><%= link_to "ver", apartment_path(apartment), :class => "btn btn-success btn-xs"%></th>
+      <% end %>
+    </tbody>
+  </table>
+</div>
