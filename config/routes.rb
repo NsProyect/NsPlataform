@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  resources :doctypes
+
   resources :ipqrs
 
   resources :users
@@ -7,8 +9,6 @@ Rails.application.routes.draw do
   resources :apartments
 
   resources :sitios
-
-  resources :doc_types
 
   resources :apartments
 

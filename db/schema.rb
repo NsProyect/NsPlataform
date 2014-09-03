@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140812072159) do
+ActiveRecord::Schema.define(version: 20140902140410) do
 
   create_table "apartments", force: true do |t|
     t.string   "code"
@@ -40,9 +40,9 @@ ActiveRecord::Schema.define(version: 20140812072159) do
     t.datetime "updated_at"
   end
 
-  create_table "doc_types", force: true do |t|
-    t.string   "abbrev"
+  create_table "doctypes", force: true do |t|
     t.string   "name"
+    t.string   "abbrev"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -61,25 +61,10 @@ ActiveRecord::Schema.define(version: 20140812072159) do
 
   add_index "employees", ["charge_id"], name: "index_employees_on_charge_id"
 
-  create_table "estados", force: true do |t|
-    t.string   "nombre"
-    t.text     "descripcion"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-# Could not dump table "inicios" because of following NoMethodError
-#   undefined method `[]' for nil:NilClass
-
   create_table "ipqrs", force: true do |t|
     t.string   "name"
     t.string   "mail"
     t.text     "comments"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  create_table "mas_informacions", force: true do |t|
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -105,6 +90,7 @@ ActiveRecord::Schema.define(version: 20140812072159) do
     t.date     "reservationdateout"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "apartment_id"
   end
 
   add_index "reservations", ["doctype_id"], name: "index_reservations_on_doctype_id"

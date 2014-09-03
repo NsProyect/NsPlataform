@@ -1,6 +1,6 @@
 class ReservationsController < ApplicationController
   before_action :set_reservation, only: [:show, :edit, :update, :destroy, :index, :new, :create]
-
+  #before_action :set_reservation, except: [:allreservations]
   # GET /reservations
   # GET /reservations.json
   def index
@@ -62,8 +62,8 @@ class ReservationsController < ApplicationController
     end
   end
 
-   def allreservations
-    @reservation = Reservation.search(params[:search], params[:page])
+  def allreservations
+    @reservations = Reservation.all
   end  
 
   private

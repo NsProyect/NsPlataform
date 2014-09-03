@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Nombre:</strong>
+  <%= @doctype.name %>
+</p>
+
+<p>
+  <strong>Sigla:</strong>
+  <%= @doctype.abbrev %>
+</p>
+
+<%= link_to 'Editar', edit_doctype_path(@doctype) %> |
+<%= link_to 'Atras', doctypes_path %>

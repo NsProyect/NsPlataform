@@ -1,120 +1,96 @@
-              Prefix Verb   URI Pattern                          Controller#Action
-               ipqrs GET    /ipqrs(.:format)                     ipqrs#index
-                     POST   /ipqrs(.:format)                     ipqrs#create
-            new_ipqr GET    /ipqrs/new(.:format)                 ipqrs#new
-           edit_ipqr GET    /ipqrs/:id/edit(.:format)            ipqrs#edit
-                ipqr GET    /ipqrs/:id(.:format)                 ipqrs#show
-                     PATCH  /ipqrs/:id(.:format)                 ipqrs#update
-                     PUT    /ipqrs/:id(.:format)                 ipqrs#update
-                     DELETE /ipqrs/:id(.:format)                 ipqrs#destroy
-               users GET    /users(.:format)                     users#index
-                     POST   /users(.:format)                     users#create
-            new_user GET    /users/new(.:format)                 users#new
-           edit_user GET    /users/:id/edit(.:format)            users#edit
-                user GET    /users/:id(.:format)                 users#show
-                     PATCH  /users/:id(.:format)                 users#update
-                     PUT    /users/:id(.:format)                 users#update
-                     DELETE /users/:id(.:format)                 users#destroy
-          apartments GET    /apartments(.:format)                apartments#index
-                     POST   /apartments(.:format)                apartments#create
-       new_apartment GET    /apartments/new(.:format)            apartments#new
-      edit_apartment GET    /apartments/:id/edit(.:format)       apartments#edit
-           apartment GET    /apartments/:id(.:format)            apartments#show
-                     PATCH  /apartments/:id(.:format)            apartments#update
-                     PUT    /apartments/:id(.:format)            apartments#update
-                     DELETE /apartments/:id(.:format)            apartments#destroy
-        reservations GET    /reservations(.:format)              reservations#index
-                     POST   /reservations(.:format)              reservations#create
-     new_reservation GET    /reservations/new(.:format)          reservations#new
-    edit_reservation GET    /reservations/:id/edit(.:format)     reservations#edit
-         reservation GET    /reservations/:id(.:format)          reservations#show
-                     PATCH  /reservations/:id(.:format)          reservations#update
-                     PUT    /reservations/:id(.:format)          reservations#update
-                     DELETE /reservations/:id(.:format)          reservations#destroy
-             inicios GET    /inicios(.:format)                   inicios#index
-                     POST   /inicios(.:format)                   inicios#create
-          new_inicio GET    /inicios/new(.:format)               inicios#new
-         edit_inicio GET    /inicios/:id/edit(.:format)          inicios#edit
-              inicio GET    /inicios/:id(.:format)               inicios#show
-                     PATCH  /inicios/:id(.:format)               inicios#update
-                     PUT    /inicios/:id(.:format)               inicios#update
-                     DELETE /inicios/:id(.:format)               inicios#destroy
-             estados GET    /estados(.:format)                   estados#index
-                     POST   /estados(.:format)                   estados#create
-          new_estado GET    /estados/new(.:format)               estados#new
-         edit_estado GET    /estados/:id/edit(.:format)          estados#edit
-              estado GET    /estados/:id(.:format)               estados#show
-                     PATCH  /estados/:id(.:format)               estados#update
-                     PUT    /estados/:id(.:format)               estados#update
-                     DELETE /estados/:id(.:format)               estados#destroy
-    mas_informacions GET    /mas_informacions(.:format)          mas_informacions#index
-                     POST   /mas_informacions(.:format)          mas_informacions#create
- new_mas_informacion GET    /mas_informacions/new(.:format)      mas_informacions#new
-edit_mas_informacion GET    /mas_informacions/:id/edit(.:format) mas_informacions#edit
-     mas_informacion GET    /mas_informacions/:id(.:format)      mas_informacions#show
-                     PATCH  /mas_informacions/:id(.:format)      mas_informacions#update
-                     PUT    /mas_informacions/:id(.:format)      mas_informacions#update
-                     DELETE /mas_informacions/:id(.:format)      mas_informacions#destroy
-              sitios GET    /sitios(.:format)                    sitios#index
-                     POST   /sitios(.:format)                    sitios#create
-           new_sitio GET    /sitios/new(.:format)                sitios#new
-          edit_sitio GET    /sitios/:id/edit(.:format)           sitios#edit
-               sitio GET    /sitios/:id(.:format)                sitios#show
-                     PATCH  /sitios/:id(.:format)                sitios#update
-                     PUT    /sitios/:id(.:format)                sitios#update
-                     DELETE /sitios/:id(.:format)                sitios#destroy
-       galeria_index GET    /galeria/index(.:format)             galeria#index
-     contactos_index GET    /contactos/index(.:format)           contactos#index
-   static_pages_home GET    /static_pages/home(.:format)         static_pages#home
-   static_pages_help GET    /static_pages/help(.:format)         static_pages#help
-static_pages_contact GET    /static_pages/contact(.:format)      static_pages#contact
-  static_pages_about GET    /static_pages/about(.:format)        static_pages#about
-            reservas GET    /reservas(.:format)                  reservas#index
-                     POST   /reservas(.:format)                  reservas#create
-         new_reserva GET    /reservas/new(.:format)              reservas#new
-        edit_reserva GET    /reservas/:id/edit(.:format)         reservas#edit
-             reserva GET    /reservas/:id(.:format)              reservas#show
-                     PATCH  /reservas/:id(.:format)              reservas#update
-                     PUT    /reservas/:id(.:format)              reservas#update
-                     DELETE /reservas/:id(.:format)              reservas#destroy
-           doc_types GET    /doc_types(.:format)                 doc_types#index
-                     POST   /doc_types(.:format)                 doc_types#create
-        new_doc_type GET    /doc_types/new(.:format)             doc_types#new
-       edit_doc_type GET    /doc_types/:id/edit(.:format)        doc_types#edit
-            doc_type GET    /doc_types/:id(.:format)             doc_types#show
-                     PATCH  /doc_types/:id(.:format)             doc_types#update
-                     PUT    /doc_types/:id(.:format)             doc_types#update
-                     DELETE /doc_types/:id(.:format)             doc_types#destroy
-                     GET    /apartments(.:format)                apartments#index
-                     POST   /apartments(.:format)                apartments#create
-                     GET    /apartments/new(.:format)            apartments#new
-                     GET    /apartments/:id/edit(.:format)       apartments#edit
-                     GET    /apartments/:id(.:format)            apartments#show
-                     PATCH  /apartments/:id(.:format)            apartments#update
-                     PUT    /apartments/:id(.:format)            apartments#update
-                     DELETE /apartments/:id(.:format)            apartments#destroy
-              states GET    /states(.:format)                    states#index
-                     POST   /states(.:format)                    states#create
-           new_state GET    /states/new(.:format)                states#new
-          edit_state GET    /states/:id/edit(.:format)           states#edit
-               state GET    /states/:id(.:format)                states#show
-                     PATCH  /states/:id(.:format)                states#update
-                     PUT    /states/:id(.:format)                states#update
-                     DELETE /states/:id(.:format)                states#destroy
-             charges GET    /charges(.:format)                   charges#index
-                     POST   /charges(.:format)                   charges#create
-          new_charge GET    /charges/new(.:format)               charges#new
-         edit_charge GET    /charges/:id/edit(.:format)          charges#edit
-              charge GET    /charges/:id(.:format)               charges#show
-                     PATCH  /charges/:id(.:format)               charges#update
-                     PUT    /charges/:id(.:format)               charges#update
-                     DELETE /charges/:id(.:format)               charges#destroy
-           employees GET    /employees(.:format)                 employees#index
-                     POST   /employees(.:format)                 employees#create
-        new_employee GET    /employees/new(.:format)             employees#new
-       edit_employee GET    /employees/:id/edit(.:format)        employees#edit
-            employee GET    /employees/:id(.:format)             employees#show
-                     PATCH  /employees/:id(.:format)             employees#update
-                     PUT    /employees/:id(.:format)             employees#update
-                     DELETE /employees/:id(.:format)             employees#destroy
-                root GET    /                                    static_pages#home
+                    Prefix Verb   URI Pattern                                               Controller#Action
+                  doctypes GET    /doctypes(.:format)                                       doctypes#index
+                           POST   /doctypes(.:format)                                       doctypes#create
+               new_doctype GET    /doctypes/new(.:format)                                   doctypes#new
+              edit_doctype GET    /doctypes/:id/edit(.:format)                              doctypes#edit
+                   doctype GET    /doctypes/:id(.:format)                                   doctypes#show
+                           PATCH  /doctypes/:id(.:format)                                   doctypes#update
+                           PUT    /doctypes/:id(.:format)                                   doctypes#update
+                           DELETE /doctypes/:id(.:format)                                   doctypes#destroy
+                     ipqrs GET    /ipqrs(.:format)                                          ipqrs#index
+                           POST   /ipqrs(.:format)                                          ipqrs#create
+                  new_ipqr GET    /ipqrs/new(.:format)                                      ipqrs#new
+                 edit_ipqr GET    /ipqrs/:id/edit(.:format)                                 ipqrs#edit
+                      ipqr GET    /ipqrs/:id(.:format)                                      ipqrs#show
+                           PATCH  /ipqrs/:id(.:format)                                      ipqrs#update
+                           PUT    /ipqrs/:id(.:format)                                      ipqrs#update
+                           DELETE /ipqrs/:id(.:format)                                      ipqrs#destroy
+                     users GET    /users(.:format)                                          users#index
+                           POST   /users(.:format)                                          users#create
+                  new_user GET    /users/new(.:format)                                      users#new
+                 edit_user GET    /users/:id/edit(.:format)                                 users#edit
+                      user GET    /users/:id(.:format)                                      users#show
+                           PATCH  /users/:id(.:format)                                      users#update
+                           PUT    /users/:id(.:format)                                      users#update
+                           DELETE /users/:id(.:format)                                      users#destroy
+                apartments GET    /apartments(.:format)                                     apartments#index
+                           POST   /apartments(.:format)                                     apartments#create
+             new_apartment GET    /apartments/new(.:format)                                 apartments#new
+            edit_apartment GET    /apartments/:id/edit(.:format)                            apartments#edit
+                 apartment GET    /apartments/:id(.:format)                                 apartments#show
+                           PATCH  /apartments/:id(.:format)                                 apartments#update
+                           PUT    /apartments/:id(.:format)                                 apartments#update
+                           DELETE /apartments/:id(.:format)                                 apartments#destroy
+                    sitios GET    /sitios(.:format)                                         sitios#index
+                           POST   /sitios(.:format)                                         sitios#create
+                 new_sitio GET    /sitios/new(.:format)                                     sitios#new
+                edit_sitio GET    /sitios/:id/edit(.:format)                                sitios#edit
+                     sitio GET    /sitios/:id(.:format)                                     sitios#show
+                           PATCH  /sitios/:id(.:format)                                     sitios#update
+                           PUT    /sitios/:id(.:format)                                     sitios#update
+                           DELETE /sitios/:id(.:format)                                     sitios#destroy
+                           GET    /apartments(.:format)                                     apartments#index
+                           POST   /apartments(.:format)                                     apartments#create
+                           GET    /apartments/new(.:format)                                 apartments#new
+                           GET    /apartments/:id/edit(.:format)                            apartments#edit
+                           GET    /apartments/:id(.:format)                                 apartments#show
+                           PATCH  /apartments/:id(.:format)                                 apartments#update
+                           PUT    /apartments/:id(.:format)                                 apartments#update
+                           DELETE /apartments/:id(.:format)                                 apartments#destroy
+                    states GET    /states(.:format)                                         states#index
+                           POST   /states(.:format)                                         states#create
+                 new_state GET    /states/new(.:format)                                     states#new
+                edit_state GET    /states/:id/edit(.:format)                                states#edit
+                     state GET    /states/:id(.:format)                                     states#show
+                           PATCH  /states/:id(.:format)                                     states#update
+                           PUT    /states/:id(.:format)                                     states#update
+                           DELETE /states/:id(.:format)                                     states#destroy
+                   charges GET    /charges(.:format)                                        charges#index
+                           POST   /charges(.:format)                                        charges#create
+                new_charge GET    /charges/new(.:format)                                    charges#new
+               edit_charge GET    /charges/:id/edit(.:format)                               charges#edit
+                    charge GET    /charges/:id(.:format)                                    charges#show
+                           PATCH  /charges/:id(.:format)                                    charges#update
+                           PUT    /charges/:id(.:format)                                    charges#update
+                           DELETE /charges/:id(.:format)                                    charges#destroy
+                 employees GET    /employees(.:format)                                      employees#index
+                           POST   /employees(.:format)                                      employees#create
+              new_employee GET    /employees/new(.:format)                                  employees#new
+             edit_employee GET    /employees/:id/edit(.:format)                             employees#edit
+                  employee GET    /employees/:id(.:format)                                  employees#show
+                           PATCH  /employees/:id(.:format)                                  employees#update
+                           PUT    /employees/:id(.:format)                                  employees#update
+                           DELETE /employees/:id(.:format)                                  employees#destroy
+    apartment_reservations GET    /apartments/:apartment_id/reservations(.:format)          reservations#index
+                           POST   /apartments/:apartment_id/reservations(.:format)          reservations#create
+ new_apartment_reservation GET    /apartments/:apartment_id/reservations/new(.:format)      reservations#new
+edit_apartment_reservation GET    /apartments/:apartment_id/reservations/:id/edit(.:format) reservations#edit
+     apartment_reservation GET    /apartments/:apartment_id/reservations/:id(.:format)      reservations#show
+                           PATCH  /apartments/:apartment_id/reservations/:id(.:format)      reservations#update
+                           PUT    /apartments/:apartment_id/reservations/:id(.:format)      reservations#update
+                           DELETE /apartments/:apartment_id/reservations/:id(.:format)      reservations#destroy
+                           GET    /apartments(.:format)                                     apartments#index
+                           POST   /apartments(.:format)                                     apartments#create
+                           GET    /apartments/new(.:format)                                 apartments#new
+                           GET    /apartments/:id/edit(.:format)                            apartments#edit
+                           GET    /apartments/:id(.:format)                                 apartments#show
+                           PATCH  /apartments/:id(.:format)                                 apartments#update
+                           PUT    /apartments/:id(.:format)                                 apartments#update
+                           DELETE /apartments/:id(.:format)                                 apartments#destroy
+             galeria_index GET    /galeria/index(.:format)                                  galeria#index
+           contactos_index GET    /contactos/index(.:format)                                contactos#index
+         static_pages_home GET    /static_pages/home(.:format)                              static_pages#home
+         static_pages_help GET    /static_pages/help(.:format)                              static_pages#help
+        static_pages_about GET    /static_pages/about(.:format)                             static_pages#about
+              reservations GET    /allreservations(.:format)                                reservations#allreservations
+                      root GET    /                                                         static_pages#home

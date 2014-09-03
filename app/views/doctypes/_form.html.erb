@@ -1,0 +1,25 @@
+<%= form_for(@doctype) do |f| %>
+  <% if @doctype.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@doctype.errors.count, "error") %> prohibited this doctype from being saved:</h2>
+
+      <ul>
+      <% @doctype.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :Nombre %><br>
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :Sigla %><br>
+    <%= f.text_field :abbrev %>
+  </div>
+  <div class="actions">
+    <%= f.submit "Guardar"%>
+  </div>
+<% end %>

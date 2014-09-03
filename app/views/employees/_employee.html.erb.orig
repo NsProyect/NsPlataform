@@ -1,0 +1,17 @@
+<tr id=<%= "employee_#{employee.id}" %>> 
+   <td><%= employee.name %></td> 
+   <td><%= employee.lastName %></td> 
+   <td><%= employee.doc %></td> 
+   <td><%= employee.charge_id %></td> 
+   <td><%= employee.password %></td>
+   <td><%= employee.nickName %></td> 
+   <td><%= employee.mail %></td> 
+   <td><%= link_to 'Mostrar', employee, remote: true %></td> 
+   <td><%= link_to 'Editar', edit_employee_path(employee), remote: true  %></td> 
+   <td><%=  link_to 'Eliminar', employee, method: :delete, data: { confirm: 'Esta Seguro?' } %></td> 
+</tr> 
+ 
+<<<<<<< HEAD
+ 
+=======
+>>>>>>> c20a3f11c10898092751d1ee9e25ef7c83fbd6a5
