@@ -1,20 +1,26 @@
 Rails.application.routes.draw do
 
+  resources :doctypes
+
   resources :ipqrs
 
   resources :users
 
   resources :apartments
 
-  resources :reservations
-
-  resources :inicios
-
-  resources :estados
-
-  resources :mas_informacions
-
   resources :sitios
+
+  resources :apartments
+
+  resources :states
+
+  resources :charges
+
+  resources :employees
+
+  resources :apartments do 
+    resources :reservations 
+  end
 
   get 'galeria/index'
 
@@ -26,17 +32,8 @@ Rails.application.routes.draw do
 
   get 'static_pages/about'
 
-  resources :reservas
-
-  resources :doc_types
-
-  resources :apartments
-
-  resources :states
-
-  resources :charges
-
-  resources :employees
+  get 'allreservations/', to: 'reservations#allreservations', as: 'reservations'
+  
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

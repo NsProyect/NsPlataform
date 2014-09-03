@@ -1,4 +1,4 @@
-<%= form_for(@reservation) do |f| %>
+<%= simple_form_for [@apartment,@reservation], :html => { :class => 'form­horizontal' } do |f| %>
   <% if @reservation.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@reservation.errors.count, "error") %> prohibited this reservation from being saved:</h2>
@@ -11,18 +11,14 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :Codigo %><br>
-    <%= f.text_field :aptocode %>
-  </div>
-  <div class="field">
+   <div class="field">
     <%= f.label :Nombre %><br>
     <%= f.text_field :name %>
   </div>
   <div class="field">
     Tipo de Documento <br>
     <%= f.collection_select :doctype_id, 
-    DocType.all, 
+    Doctype.all, 
     :id, 
     :name, 
     class: "form-control", prompt: "Seleccione Tipo de Documento" %>
@@ -41,8 +37,10 @@
     <script type="text/javascript">
       $('.datepicker').datepicker({
         language: "es",
-        format: "yyyy/mm/dd"
-        });
+        format: "yyyy/mm/dd",
+        autoclose: true,
+        todayHighlight: true,
+      });
     </script>
   </div>
   <div class="field">
@@ -51,11 +49,14 @@
     <script type="text/javascript">
       $('.datepicker').datepicker({
         language: "es",
-        format: "yyyy/mm/dd"
+        format: "yyyy/mm/dd",
+        autoclose: true,
+        todayHighlight: true,
       });
     </script>
   </div>
   <div class="actions">
     <%= f.submit "Guardar" %>
+    <%= link_to t('.cancel', :default => t("helpers.links.cancel")), apartment_reservations_path(@apartment), :class => 'btn' %> 
   </div>
 <% end %>

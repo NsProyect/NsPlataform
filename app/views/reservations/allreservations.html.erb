@@ -7,6 +7,7 @@
       <th>Tipo de Documento</th>
       <th>Documento</th>
       <th>Correo</th>
+      <th>Apartamento</th>
       <th>Fecha de Ingreso</th>
       <th>Fecha de Salida</th>
       <th colspan="3"></th>
@@ -20,17 +21,15 @@
         <td><%= reservation.doctype.name rescue nil%></td>
         <td><%= reservation.doc %></td>
         <td><%= reservation.mail %></td>
+        <td><%= reservation.apartment_id %></td>
         <td><%= reservation.reservaciondatein %></td>
         <td><%= reservation.reservationdateout %></td>
         
-        <td><%= link_to 'Ver', apartment_reservation_path(@apartment,reservation) %></td>
-        <td><%= link_to 'Editar', edit_apartment_reservation_path(@apartment,reservation) %></td>
-        <td><%= link_to 'Eliminar', apartment_reservation_path(@apartment,reservation) , method: :delete, data: { confirm: 'Esta seguro?' } %></td>
+        <td><%= link_to 'Ver', apartment_reservation_path(reservation.apartment,reservation) %></td>
+        <td><%= link_to 'Editar', edit_apartment_reservation_path(reservation.apartment,reservation) %></td>
+        <td><%= link_to 'Eliminar', apartment_reservation_path(reservation.apartment,reservation) , method: :delete, data: { confirm: 'Esta seguro?' } %></td>
       </tr>
     <% end %>
   </tbody>
 </table>
-
 <br>
-
-<%= link_to t('.Nueva Reserva', :default => t("helpers.links.new")), new_apartment_reservation_path(@apartment), :class => 'btn btn­primary' %>
