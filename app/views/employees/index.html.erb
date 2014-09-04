@@ -15,8 +15,6 @@ Buscador:
       <th>Apellidos</th>
       <th>Documento</th>
       <th>Cargo</th>
-      <th>Contraseña</th>
-      <th>Nick Name</th>
       <th>Mail</th>      
       <th colspan="3">Opciones</th>
     </tr>
@@ -28,7 +26,7 @@ Buscador:
 </table>
 
 <br>
-<%= link_to 'Nuevo Empleado', new_employee_path, remote: true , class: "btn btn-primary"%>
+<%= link_to 'Agregar', new_employee_path, remote: true , class: "btn btn-primary btn-xs" %>
  <br>
 <%= will_paginate @employees, renderer: BootstrapPagination::Rails %>
 <br>

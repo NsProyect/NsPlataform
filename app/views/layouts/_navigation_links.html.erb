@@ -1,6 +1,6 @@
 <%# add navigation links to this file %>
 <li><%= image_tag "logo.png", class: 'logotipo'%></li>
-<li><%= link_to "Inicio", static_pages_home_path, class: 'navbar-brand' %></li>
+<li><%= link_to "Home", static_pages_home_path %></li>
 <li><%= link_to "Sitios de Interes", sitios_path %></li>
 <li><%= link_to "Acerca de Nosotros", static_pages_about_path%></li>
 <li><%= link_to "Contacto", new_ipqr_path %></li>
@@ -8,3 +8,9 @@
 <li><%= link_to "Empleados", employees_path %></li>
 <li><%= link_to "Reservaciones", reservations_path %></li>
 <li><%= link_to "Comentarios", ipqrs_path %></li>
+<% if current_user %> 
+      <%= link_to "Editar Perfil", edit_user_path(current_user.id) %> 
+      <%= link_to "Salir", :logout, method: :get %> 
+ <% else %> 
+      <%= link_to "Registar", new_user_path %>
+<% end %> 
