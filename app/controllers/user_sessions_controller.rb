@@ -7,7 +7,7 @@ class UserSessionsController < ApplicationController
 
 	def create
 	  	if @user = login(params[:email], params[:password]) 
-			redirect_back_or_to(:employees, notice: 'Bienvenido!') 
+			redirect_back_or_to(:users, notice: 'Bienvenido!') 
 		else  
 			flash.now[:alert] = 'Usuario y/o Contraseña Errados' 
 			render action: 'new' 

@@ -1,4 +1,5 @@
 class UsersController < ApplicationController
+  load_and_authorize_resource
   skip_before_filter :require_login, only: [:index, :new, :create] 
   before_action :set_user, only: [:show, :edit, :update, :destroy]
 
@@ -70,6 +71,6 @@ class UsersController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def user_params
-      params.require(:user).permit(:email, :password, :password_confirmation)
+      params.require(:user).permit(:email, :password, :password_confirmation, :admin, :user, :name, :lastname, :doc)
     end
 end

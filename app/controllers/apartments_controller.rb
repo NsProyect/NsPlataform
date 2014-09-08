@@ -1,5 +1,6 @@
 class ApartmentsController < ApplicationController
   before_action :set_apartment, only: [:show, :edit, :update, :destroy]
+  skip_before_filter :require_login
 
   # GET /apartments
   # GET /apartments.json

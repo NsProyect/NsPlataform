@@ -1,13 +1,10 @@
 <div class="jumbotron">
+<h1 class="alert alert-info"><%= @sitio.nombre %></h1>
 	<p id="notice"><%= notice %></p>
 
 	<%= image_tag @sitio.image.url(:medium) %>
 
 	<br>
-	<p>
-	  <strong>Nombre:</strong>
-	  <%= @sitio.nombre %>
-	</p>
 
 	<p>
 	  <strong>Descripcion:</strong>
@@ -19,6 +16,8 @@
 	  <%= @sitio.direccion %>
 	</p>
 
-	<%= link_to 'Editar', edit_sitio_path(@sitio) %> |
-	<%= link_to 'Atras', sitios_path %>
+	<% if current_user %> 
+		<%= link_to 'Editar', edit_sitio_path(@sitio), class: "btn btn-default btn-xs" %> 
+	<% end %> 
+	<%= link_to 'Atras', sitios_path, class: "btn btn-default btn-xs" %>
 </div>

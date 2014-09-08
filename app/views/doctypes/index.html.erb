@@ -1,4 +1,4 @@
-<h1>Tipos de Documentos</h1>
+<h1 class="alert alert-info">Tipos de Documentos</h1>
 
 <table class="table table-striped table-hover ">
   <thead>
@@ -14,14 +14,19 @@
       <tr>
         <td><%= doctype.name %></td>
         <td><%= doctype.abbrev %></td>
-        <td><%= link_to 'Ver', doctype %></td>
-        <td><%= link_to 'Editar', edit_doctype_path(doctype) %></td>
-        <td><%= link_to 'Eliminar', doctype, method: :delete, data: { confirm: 'Esta Seguro?' } %></td>
+        <td><%= link_to 'Ver', doctype, class: "btn btn-default btn-xs" %></td>
+        <% if current_user.admin == true %>
+        <td><%= link_to 'Editar', edit_doctype_path(doctype), class: "btn btn-default btn-xs" %></td>
+        <% end %>
+        <% if current_user.admin == true %>
+        <td><%= link_to 'Eliminar', doctype, method: :delete, data: { confirm: 'Esta Seguro?' }, class: "btn btn-warning btn-xs" %></td>
+        <% end %>
       </tr>
     <% end %>
   </tbody>
 </table>
 
 <br>
-
+<% if current_user.admin == true %>
 <%= link_to 'Agregar', new_doctype_path, class: "btn btn-primary btn-xs" %>
+<% end %>

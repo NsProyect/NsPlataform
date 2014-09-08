@@ -6,7 +6,10 @@
     <ul>
       <li><%= link_to "https://es-la.facebook.com/pages/NS-Apartamentos/540144742664804" do %><%= image_tag "facebook_logo.jpg",class: 'logo'%>Facebook<% end %></li>
         <li><%= link_to "https://twitter.com/nsapartamentos" do %><%= image_tag "twitter_logo.jpg",class: 'logo'%>Twitter<% end %></li>
-        <li><%= link_to "Intranet", :login %> </li>
+        <% if current_user %> 
+        <% else %> 
+          <li><%= link_to "Intranet", :login %> </li>
+        <% end %> 
     </ul>
   </nav>
 </footer>

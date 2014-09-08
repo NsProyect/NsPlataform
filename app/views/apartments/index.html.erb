@@ -1,4 +1,7 @@
-<h1>Apartamentos</h1>
+<ul class="nav nav-tabs" style="margin-bottom: 15px;">
+
+</ul>
+<h1 class="alert alert-info">Apartamentos</h1>
 
 <table class="table table-striped table-hover ">
   <thead>
@@ -17,16 +20,16 @@
   <tbody>
     <% @apartments.each do |apartment| %>
       <tr>
-        <td><%= link_to "Reservar", apartment_reservations_path(apartment) %></td>
+        <td><span class="label label-default"><%= link_to "Reservar", apartment_reservations_path(apartment) %></span></td>
         <td><%= apartment.address %></td>
         <td><%= apartment.state.name rescue nil%></td>
         <td><%= apartment.room %></td>
         <td><%= apartment.cost %></td>
         <td><%= apartment.amenities %></td>
         <td><%= image_tag apartment.image.url(:thumb) %></td>
-        <td><%= link_to 'Ver', apartment %></td>
-        <td><%= link_to 'Editar', edit_apartment_path(apartment) %></td>
-        <td><%= link_to 'Eliminar', apartment, method: :delete, data: { confirm: 'Esta Seguro?' } %></td>
+        <td><%= link_to 'Ver', apartment, class: "btn btn-default btn-xs" %></td>
+        <td><%= link_to 'Editar', edit_apartment_path(apartment), class: "btn btn-default btn-xs" %></td>
+        <td><%= link_to 'Eliminar', apartment, method: :delete, data: { confirm: 'Esta Seguro?' }, class: "btn btn-warning btn-xs" %></td>
       </tr>
     <% end %>
   </tbody>

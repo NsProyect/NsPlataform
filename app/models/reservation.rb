@@ -12,5 +12,4 @@ class Reservation < ActiveRecord::Base
 	# valida la longitud de un campo, tanto la longitud minima como la maxima
 	validates :doc, length: { minimum: 5, maximum: 30 }
 	# Valida si un atributo es numerico
-	validates :doc, numericality: true
 end

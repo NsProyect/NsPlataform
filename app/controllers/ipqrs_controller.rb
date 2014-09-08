@@ -1,5 +1,6 @@
 class IpqrsController < ApplicationController
   before_action :set_ipqr, only: [:show, :edit, :update, :destroy]
+  skip_before_filter :require_login
 
   # GET /ipqrs
   # GET /ipqrs.json

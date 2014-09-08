@@ -1,19 +1,9 @@
 Rails.application.routes.draw do
 
-  get 'user_sessions/new'
-
-  get 'user_sessions/create'
-
-  get 'user_sessions/destroy'
-
-  resources :users
   resources :doctypes
   resources :ipqrs
   resources :apartments
   resources :sitios
-  resources :states
-  resources :charges
-  resources :employees
   resources :user_sessions 
   resources :users 
 
@@ -21,13 +11,10 @@ Rails.application.routes.draw do
     resources :reservations 
   end
 
-  
-
   get 'user_session/new'
   get 'user_session/create'
   get 'user_session/destroy'  
   get 'galeria/index'
-  get 'contactos/index'
   get 'static_pages/home'
   get 'static_pages/about'
  
