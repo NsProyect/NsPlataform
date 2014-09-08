@@ -30,11 +30,11 @@
   </div>
   <div class="field">
     <%= f.label :Contraseña %><br>
-    <%= f.text_field :password %>
+    <%= f.password_field :password %>
   </div>
   <div class="field">
     <%= f.label :Confirmar_Contraseña %><br>
-    <%= f.text_field :password_confirmation %>
+    <%= f.password_field :password_confirmation %>
   </div>
   <% if current_user.admin == true %>
     <div class="field">
