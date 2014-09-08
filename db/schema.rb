@@ -69,17 +69,6 @@ ActiveRecord::Schema.define(version: 20140902140410) do
     t.datetime "updated_at"
   end
 
-  create_table "reservas", force: true do |t|
-    t.string   "nombre"
-    t.string   "email"
-    t.date     "fecha_ingreso"
-    t.date     "fecha_salida"
-    t.string   "apartamento"
-    t.string   "hostal"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
   create_table "reservations", force: true do |t|
     t.string   "aptocode"
     t.string   "name"
