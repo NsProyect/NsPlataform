@@ -24,3 +24,11 @@ states.each do |state|
 	State.create(state) unless State.exists? (state)
 	
 end	
+
+users = [
+  {email:"hola@user.com", crypted_password:7410, salt:7410, admin:1, user:0,  name: "hola", lastname:"hola", doc:123456789}
+        ]
+users.each do |user|
+  User.create(user) unless User.exists? (user)
+	
+end	
