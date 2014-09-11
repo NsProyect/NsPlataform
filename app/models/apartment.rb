@@ -10,5 +10,7 @@ class Apartment < ActiveRecord::Base
   validates :room, :presence => true
   validates :amenities, :presence => true
   validates :address, uniqueness: { message: "La Dirección debe ser Unica" } 
+
+  
   
 end

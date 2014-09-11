@@ -1,5 +1,6 @@
 class UsersController < ApplicationController
-  skip_before_filter :require_login, only: [:index, :new, :create]
+  load_and_authorize_resource
+  skip_before_filter :require_login, only: [:index, :new, :create] 
   before_action :set_user, only: [:show, :edit, :update, :destroy]
 
   # GET /users
@@ -43,7 +44,7 @@ class UsersController < ApplicationController
   def update
     respond_to do |format|
       if @user.update(user_params)
-        format.html { redirect_to @user, notice: 'Usuario Actualizado.' }
+        format.html { redirect_to @user, notice: 'Perfil Actualizado.' }
         format.json { render :show, status: :ok, location: @user }
       else
         format.html { render :edit }
@@ -70,6 +71,6 @@ class UsersController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def user_params
-      params.require(:user).permit(:email, :password, :password_confirmation)
+      params.require(:user).permit(:email, :password, :password_confirmation, :admin, :user, :name, :lastname, :doc)
     end
 end

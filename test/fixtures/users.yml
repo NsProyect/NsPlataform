@@ -2,10 +2,10 @@
 
 one:
   email: MyString
-  cryted_password: MyString
+  crypted_password: MyString
   salt: MyString
 
 two:
   email: MyString
-  cryted_password: MyString
+  crypted_password: MyString
   salt: MyString

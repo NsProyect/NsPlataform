@@ -56,7 +56,7 @@
     </script>
   </div>
   <div class="actions">
-    <%= f.submit "Guardar" %>
-    <%= link_to t('.cancel', :default => t("helpers.links.cancel")), apartment_reservations_path(@apartment), :class => 'btn' %> 
+    <%= f.submit "Guardar", class: "btn btn-success btn-xs" %>
+    <%= link_to t('.cancel', :default => t("helpers.links.cancel")), apartment_reservations_path(@apartment), class: "btn btn-danger btn-xs" %> 
   </div>
 <% end %>

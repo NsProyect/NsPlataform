@@ -1,37 +1,25 @@
 Rails.application.routes.draw do
 
   resources :doctypes
-
   resources :ipqrs
-
-  resources :users
-
   resources :apartments
-
   resources :sitios
-
-  resources :apartments
-
-  resources :states
-
-  resources :charges
-
-  resources :employees
+  resources :user_sessions 
+  resources :users 
 
   resources :apartments do 
     resources :reservations 
   end
 
+  get 'user_session/new'
+  get 'user_session/create'
+  get 'user_session/destroy'  
   get 'galeria/index'
-
-  get 'contactos/index'
-
   get 'static_pages/home'
-
-  get 'static_pages/help'
-
   get 'static_pages/about'
-
+ 
+  get 'login', to: 'user_sessions#new', :as => :login 
+  get 'logout', to: 'user_sessions#destroy', :as => :logout 
   get 'allreservations/', to: 'reservations#allreservations', as: 'reservations'
   
 

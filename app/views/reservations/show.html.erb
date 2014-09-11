@@ -1,3 +1,4 @@
+<h1 class="alert alert-info">Reserva</h1>
 <p id="notice"><%= notice %></p>
 
 <p>
@@ -30,5 +31,5 @@
   <%= @reservation.reservationdateout %>
 </p>
 
-<%= link_to 'Editar', edit_apartment_reservation_path(@apartment,@reservation) %> |
-<%= link_to 'Atras', reservations_path %>
+<%= link_to 'Editar', edit_apartment_reservation_path(@apartment,@reservation), class: "btn btn-default btn-xs" %> 
+<%= link_to 'Atras', reservations_path, class: "btn btn-default btn-xs" %>

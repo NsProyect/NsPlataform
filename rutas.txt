@@ -1,4 +1,12 @@
                     Prefix Verb   URI Pattern                                               Controller#Action
+                     users GET    /users(.:format)                                          users#index
+                           POST   /users(.:format)                                          users#create
+                  new_user GET    /users/new(.:format)                                      users#new
+                 edit_user GET    /users/:id/edit(.:format)                                 users#edit
+                      user GET    /users/:id(.:format)                                      users#show
+                           PATCH  /users/:id(.:format)                                      users#update
+                           PUT    /users/:id(.:format)                                      users#update
+                           DELETE /users/:id(.:format)                                      users#destroy
                   doctypes GET    /doctypes(.:format)                                       doctypes#index
                            POST   /doctypes(.:format)                                       doctypes#create
                new_doctype GET    /doctypes/new(.:format)                                   doctypes#new
@@ -15,14 +23,6 @@
                            PATCH  /ipqrs/:id(.:format)                                      ipqrs#update
                            PUT    /ipqrs/:id(.:format)                                      ipqrs#update
                            DELETE /ipqrs/:id(.:format)                                      ipqrs#destroy
-                     users GET    /users(.:format)                                          users#index
-                           POST   /users(.:format)                                          users#create
-                  new_user GET    /users/new(.:format)                                      users#new
-                 edit_user GET    /users/:id/edit(.:format)                                 users#edit
-                      user GET    /users/:id(.:format)                                      users#show
-                           PATCH  /users/:id(.:format)                                      users#update
-                           PUT    /users/:id(.:format)                                      users#update
-                           DELETE /users/:id(.:format)                                      users#destroy
                 apartments GET    /apartments(.:format)                                     apartments#index
                            POST   /apartments(.:format)                                     apartments#create
              new_apartment GET    /apartments/new(.:format)                                 apartments#new
@@ -39,14 +39,6 @@
                            PATCH  /sitios/:id(.:format)                                     sitios#update
                            PUT    /sitios/:id(.:format)                                     sitios#update
                            DELETE /sitios/:id(.:format)                                     sitios#destroy
-                           GET    /apartments(.:format)                                     apartments#index
-                           POST   /apartments(.:format)                                     apartments#create
-                           GET    /apartments/new(.:format)                                 apartments#new
-                           GET    /apartments/:id/edit(.:format)                            apartments#edit
-                           GET    /apartments/:id(.:format)                                 apartments#show
-                           PATCH  /apartments/:id(.:format)                                 apartments#update
-                           PUT    /apartments/:id(.:format)                                 apartments#update
-                           DELETE /apartments/:id(.:format)                                 apartments#destroy
                     states GET    /states(.:format)                                         states#index
                            POST   /states(.:format)                                         states#create
                  new_state GET    /states/new(.:format)                                     states#new
@@ -71,6 +63,22 @@
                            PATCH  /employees/:id(.:format)                                  employees#update
                            PUT    /employees/:id(.:format)                                  employees#update
                            DELETE /employees/:id(.:format)                                  employees#destroy
+             user_sessions GET    /user_sessions(.:format)                                  user_sessions#index
+                           POST   /user_sessions(.:format)                                  user_sessions#create
+          new_user_session GET    /user_sessions/new(.:format)                              user_sessions#new
+         edit_user_session GET    /user_sessions/:id/edit(.:format)                         user_sessions#edit
+              user_session GET    /user_sessions/:id(.:format)                              user_sessions#show
+                           PATCH  /user_sessions/:id(.:format)                              user_sessions#update
+                           PUT    /user_sessions/:id(.:format)                              user_sessions#update
+                           DELETE /user_sessions/:id(.:format)                              user_sessions#destroy
+                           GET    /users(.:format)                                          users#index
+                           POST   /users(.:format)                                          users#create
+                           GET    /users/new(.:format)                                      users#new
+                           GET    /users/:id/edit(.:format)                                 users#edit
+                           GET    /users/:id(.:format)                                      users#show
+                           PATCH  /users/:id(.:format)                                      users#update
+                           PUT    /users/:id(.:format)                                      users#update
+                           DELETE /users/:id(.:format)                                      users#destroy
     apartment_reservations GET    /apartments/:apartment_id/reservations(.:format)          reservations#index
                            POST   /apartments/:apartment_id/reservations(.:format)          reservations#create
  new_apartment_reservation GET    /apartments/:apartment_id/reservations/new(.:format)      reservations#new
@@ -87,10 +95,14 @@ edit_apartment_reservation GET    /apartments/:apartment_id/reservations/:id/edi
                            PATCH  /apartments/:id(.:format)                                 apartments#update
                            PUT    /apartments/:id(.:format)                                 apartments#update
                            DELETE /apartments/:id(.:format)                                 apartments#destroy
+          user_session_new GET    /user_session/new(.:format)                               user_session#new
+       user_session_create GET    /user_session/create(.:format)                            user_session#create
+      user_session_destroy GET    /user_session/destroy(.:format)                           user_session#destroy
              galeria_index GET    /galeria/index(.:format)                                  galeria#index
            contactos_index GET    /contactos/index(.:format)                                contactos#index
          static_pages_home GET    /static_pages/home(.:format)                              static_pages#home
-         static_pages_help GET    /static_pages/help(.:format)                              static_pages#help
         static_pages_about GET    /static_pages/about(.:format)                             static_pages#about
+                     login GET    /login(.:format)                                          user_sessions#new
+                    logout GET    /logout(.:format)                                         user_sessions#destroy
               reservations GET    /allreservations(.:format)                                reservations#allreservations
                       root GET    /                                                         static_pages#home

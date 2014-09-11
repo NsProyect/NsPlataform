@@ -1,5 +1,7 @@
 class ReservationsController < ApplicationController
   before_action :set_reservation, only: [:show, :edit, :update, :destroy, :index, :new, :create]
+  skip_before_filter :require_login
+
   #before_action :set_reservation, except: [:allreservations]
   # GET /reservations
   # GET /reservations.json

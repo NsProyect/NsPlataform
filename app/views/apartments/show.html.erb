@@ -1,14 +1,12 @@
+<h1 class="alert alert-info">Apartamento</h1>
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Codigo:</strong>
-  <%= @apartment.code %>
-</p>
-
-<p>
-  <strong>Estado:</strong>
-  <%= @apartment.state.name %>
-</p>
+<% if current_user %>
+  <p>
+    <strong>Estado:</strong>
+    <%= @apartment.state.name %>
+  </p>
+<% end %>
 
 <p>
   <strong>Direccion:</strong>
@@ -33,8 +31,10 @@
 <p>
   <%= image_tag @apartment.image.url(:medium) %>
 </p>
-<%= link_to "Reservar", new_apartment_reservation_path(@apartment), :class => "btn btn-info btn-xs" %><br><br>
-<%= link_to 'Atras', static_pages_home_path  %><br>
-
-<%= link_to 'Editar', edit_apartment_path(@apartment) %> |
-<%= link_to 'Atras', apartments_path %>
+<%= link_to 'Atras', static_pages_home_path, class: "btn btn-warning btn-xs"  %> <span></span>
+<%= link_to "Reservar", new_apartment_reservation_path(@apartment), :class => "btn btn-primary btn-xs" %><br>
+<br><br>
+<% if current_user %>
+  <%= link_to 'Editar', edit_apartment_path(@apartment), class: "btn btn-default btn-xs" %> 
+  <%= link_to 'Atras', apartments_path, class: "btn btn-default btn-xs" %>
+<% end %>  

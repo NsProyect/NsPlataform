@@ -1,19 +1,24 @@
+<h1 class="alert alert-info">Información</h1>
 <p id="notice"><%= notice %></p>
+<p>
+	<strong>Nombre:</strong>
+	<%= @user.name %>
+</p>
 
 <p>
-  <strong>Email:</strong>
+	<strong>Apellido:</strong>
+	<%= @user.lastname %>
+</p>
+
+<p>
+	<strong>Documento:</strong>
+	<%= @user.doc %>
+</p>
+<p>
+  <strong>Mail:</strong>
   <%= @user.email %>
 </p>
-
-<p>
-  <strong>Cryted password:</strong>
-  <%= @user.cryted_password %>
-</p>
-
-<p>
-  <strong>Salt:</strong>
-  <%= @user.salt %>
-</p>
-
-<%= link_to 'Edit', edit_user_path(@user) %> |
-<%= link_to 'Back', users_path %>
+<% if current_user.admin == true %>
+	<%= link_to 'Editar', edit_user_path(@user), class: "btn btn-default btn-xs" %> 
+<% end %> 
+<%= link_to 'Atras', users_path, class: "btn btn-default btn-xs" %>

@@ -1,6 +1,10 @@
-<h1>Reserva</h1>
+<h1 class="alert alert-info">Reserva</h1>
 
 <%= render 'form' %>
 
-<%= link_to 'Atras', reservations_path %><br>
-<%= link_to 'Atras', static_pages_home_path, :class => "btn btn-info btn-xs"  %>
+
+<% if current_user %>
+	<%= link_to 'Atras', reservations_path, :class => "btn btn-default btn-xs" %><br>
+<% else %>
+	<%= link_to 'Atras', static_pages_home_path, :class => "btn btn-warning btn-xs"  %><br><br>
+<% end %>

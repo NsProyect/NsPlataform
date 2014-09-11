@@ -4,6 +4,12 @@
 <li><%= link_to "Sitios de Interes", sitios_path %></li>
 <li><%= link_to "Acerca de Nosotros", static_pages_about_path%></li>
 <li><%= link_to "Contacto", new_ipqr_path %></li>
+<<<<<<< HEAD
+<li><%= link_to "Apartamentos", apartments_path %></li>
+<li><%= link_to "Empleados", employees_path %></li>
+<li><%= link_to "Reservaciones", reservations_path %></li>
+<li><%= link_to "Comentarios", ipqrs_path %></li>
+=======
 
 <% if current_user %> 
 	<li class="dropdown">
@@ -25,3 +31,4 @@
 		</ul>
 	</li>     
 <% end %> 
+>>>>>>> 7b3fb47844753e4fca8a4b09400c18bd20551389
