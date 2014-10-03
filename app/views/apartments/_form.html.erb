@@ -16,10 +16,6 @@
     <%= f.text_field :address %>
   </div>
   <div class="field">
-    Estado <br>
-    <%= f.collection_select :state_id, State.all, :id, :name, class: "form-control", prompt: "Seleccione Estado" %>
-  </div>
-  <div class="field">
     <%= f.label :Habitaciones %><br>
     <%= f.text_field :room %>
   </div>

@@ -9,6 +9,7 @@ class CreateReservations < ActiveRecord::Migration
       t.date :reservaciondatein
       t.date :reservationdateout
       t.references :apartment
+      t.references :state, index: true
 
       t.timestamps
     end

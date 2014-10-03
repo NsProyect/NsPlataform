@@ -160,3 +160,18 @@ footer ul li {
 a { text­decoration: none; } form { min­width: 300px; } 
  
 .slide { width: 50%; } 
+
+/*__________________________movimiento_________________________*/
+.img{
+  width: 220px;
+  height: 190px; 
+  overflow-y: scroll;
+  overflow-x: none;
+}
+.form{
+  height: 128px;
+}
+.des{
+  word-break: break-all;
+  word-wrap: break-word;
+}

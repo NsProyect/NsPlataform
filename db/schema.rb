@@ -59,8 +59,6 @@ ActiveRecord::Schema.define(version: 20140902140410) do
     t.datetime "updated_at"
   end
 
-  add_index "employees", ["charge_id"], name: "index_employees_on_charge_id"
-
   create_table "ipqrs", force: true do |t|
     t.string   "name"
     t.string   "mail"
@@ -80,6 +78,7 @@ ActiveRecord::Schema.define(version: 20140902140410) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "apartment_id"
+    t.integer  "state_id"
   end
 
   add_index "reservations", ["doctype_id"], name: "index_reservations_on_doctype_id"
