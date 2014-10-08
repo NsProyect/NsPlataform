@@ -10,6 +10,8 @@
       <th>Correo</th>
       <th>Fecha de Ingreso</th>
       <th>Fecha de Salida</th>
+      <th>EStado de la Reserva</th>
+
       <th colspan="3">Opciones</th>
     </tr>
   </thead>
@@ -23,6 +25,7 @@
         <td><%= reservation.mail %></td>
         <td><%= reservation.reservaciondatein %></td>
         <td><%= reservation.reservationdateout %></td>
+        <td><%= reservation.states.name rescue nil %></td>
         
         <td><%= link_to 'Ver', apartment_reservation_path(@apartment,reservation), class: "btn btn-default btn-xs" %></td>
         
