@@ -5858,3 +5858,128 @@ button.close {
   background-color: #fff;
   color: #772953;
 }
+
+/* footer */
+
+footer {
+  margin-top: 45px;
+  padding-top: 5px;
+  border-top: 1px solid #eaeaea;
+  color: #FF4000;
+}
+
+footer a {
+  color: #FF4000;
+}  
+
+footer a:hover {
+  color: #FA7415;
+}
+
+footer small {
+  float: left;
+}
+
+footer ul {
+  float: right;
+  list-style: none;
+}
+
+footer ul li {
+  float: left;
+  margin-left: 10px;
+}
+
+
+.logotipo{
+  width:30%;
+  height:auto;
+  margin: 0px -100px 10px 30px; 
+}
+
+.logo{
+  width:10%;
+  height:10%;
+  margin: 0px -200px 0px 0px; 
+}
+
+
+/* lazybox */ 
+ #lazy_close.img { 
+  background: image­url('close.png') no­repeat; 
+  width: 48px; 
+  height: 48px; 
+  top: ­25px; 
+  right: ­25px; 
+} 
+ 
+#lazybox.player { 
+  border: none; 
+  background: #222; 
+  border­radius: 0; 
+  box­shadow: 0 0 50px 10px cyan; 
+} 
+ 
+#lazybox.confirm { 
+  border­radius: 0; 
+  border: 3px solid #222; 
+  background: linear­gradient(#e2e2e2, white); 
+  a#lazybox_close { display: none; } 
+} 
+ 
+#lazybox.sticker { 
+  border­radius­bottomleft: 20px 500px; 
+  border­radius­bottomright: 500px 30px; 
+  border­radius­topright: 5px 100px; 
+  background: #FCF59B; 
+  border­bottom­left­radius: 20px 500px; 
+  border­bottom­right­radius: 500px 30px; 
+  border­top­right­radius: 5px 100px; 
+} 
+ 
+#lazybox.lazybox { 
+  padding: 0; 
+  border: 0; 
+  background: transparent; 
+  width: 45%; 
+  box­shadow: none; 
+  ul li { list­style: none; } 
+  img { width: 100%; } 
+} 
+ 
+a { text­decoration: none; } form { min­width: 300px; } 
+ 
+.slide { width: 50%; } 
+
+.login{
+  background-image:url(login.jpg);
+  background-repeat: no-repeat;
+  margin:0px 0px 80px 450px;
+  padding: 40px;
+  border-radius: 20px ;
+  border:solid;
+  width: 405px;
+  background-size: 130%;
+}
+
+.boton{
+  margin: -30px 0px 0px 120px; 
+}
+.home{
+  margin: 0px 0px 0px 25px;
+}
+.busqueda{
+  background-color: #FFBF00;
+  margin:10px 480px 10px 480px;
+  border-radius: 20px ;
+  padding: 40px;
+}
+.informacion{
+   margin:0px 310px 10px 100px;
+}
+.contacto{
+  background-color:#FE9A2E;
+  margin:10px 560px 0px 0px;
+  border-radius: 20px ;
+  padding: 40px;
+}

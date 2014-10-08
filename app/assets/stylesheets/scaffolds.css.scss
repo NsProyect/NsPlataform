@@ -102,15 +102,15 @@ footer ul li {
 
 
 .logotipo{
-  width:40%;
-  height:0%;
+  width:30%;
+  height:auto;
   margin: 0px -100px 10px 30px; 
 }
 
 .logo{
-  width:50%;
-  height:50%;
-  margin: 0px -300px 0px 0px; 
+  width:10%;
+  height:10%;
+  margin: 0px -200px 0px 0px; 
 }
 
 
@@ -161,17 +161,35 @@ a { text­decoration: none; } form { min­width: 300px; }
  
 .slide { width: 50%; } 
 
-/*__________________________movimiento_________________________*/
-.img{
-  width: 220px;
-  height: 190px; 
-  overflow-y: scroll;
-  overflow-x: none;
+.login{
+  background-image:url(login.jpg);
+  background-repeat: no-repeat;
+  margin:0px 0px 80px 450px;
+  padding: 40px;
+  border-radius: 20px ;
+  border:solid;
+  width: 405px;
+  background-size: 130%;
 }
-.form{
-  height: 128px;
+
+.boton{
+  margin: -30px 0px 0px 120px; 
 }
-.des{
-  word-break: break-all;
-  word-wrap: break-word;
+.home{
+  margin: 0px 0px 0px 25px;
+}
+.busqueda{
+  background-color: #FFBF00;
+  margin:10px 480px 10px 480px;
+  border-radius: 20px ;
+  padding: 40px;
+}
+.informacion{
+   margin:0px 310px 10px 100px;
+}
+.contacto{
+  background-color:#FE9A2E;
+  margin:10px 560px 0px 0px;
+  border-radius: 20px ;
+  padding: 40px;
 }
