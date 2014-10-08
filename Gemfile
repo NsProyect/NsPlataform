@@ -61,3 +61,6 @@ gem 'sorcery'
 gem 'ransack'
 
 gem 'bootstrap-datepicker-rails', :require => 'bootstrap-datepicker-rails'
+gem "cancan"
+gem "rolify"
+#gem "meta_search" 

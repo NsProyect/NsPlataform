@@ -1,40 +1,8 @@
 <ul class="nav nav-tabs" style="margin-bottom: 15px;">
 
 </ul>
-<h1 class="alert alert-info">Apartamentos</h1>
-<%= search_form_for @search do |f| %>
-  <div class="field">
-   <%= f.label :cost_cont ,"costo" %>   
-    <%= f.text_field :cost_cont %>   
-  </div>
-  <div class="field">
-   <%= f.label :room_cont ,"N° Habitaciones" %>   
-    <%= f.text_field :room_cont %>   
-  </div>
-  <div class="field">
-   <%= f.label :reservaciondatein_cont ,"Fecha entrada" %>   
-    <%= f.text_field :reservaciondatein_cont ,class: 'datepicker'%> 
-    <script type="text/javascript">
-      $('.datepicker').datepicker({
-        language: "es",
-        format: "yyyy/mm/dd"
-        })
-    </script>
-
-
-  </div>
-  <div class="field">
-   <%= f.label :reservationdateout_cont ,"Fecha salida" %>   
-    <%= f.text_field :reservationdateout_cont ,class: 'datepicker'%>  
-     <script type="text/javascript">
-      $('.datepicker').datepicker({
-        language: "es",
-        format: "yyyy/mm/dd"
-        })
-    </script> 
-  </div>
-  <div class="actions"><%= f.submit "Buscar" %></div>
-<% end %>
+<div class = "well well-sm">
+  
 
 <table class="table table-striped table-hover ">
   <thead>

@@ -28,46 +28,12 @@ ActiveRecord::Schema.define(version: 20140904152511) do
     t.datetime "image_updated_at"
   end
 
-  create_table "buscadors", force: true do |t|
-    t.date     "fecha_inicio"
-    t.date     "fecha_fin"
-    t.string   "habitaciones"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  create_table "charges", force: true do |t|
-    t.string   "name"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  create_table "contactos", force: true do |t|
-    t.string   "index"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
   create_table "doctypes", force: true do |t|
     t.string   "name"
     t.string   "abbrev"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
-
-  create_table "employees", force: true do |t|
-    t.string   "name"
-    t.string   "lastName"
-    t.string   "doc"
-    t.integer  "charge_id"
-    t.string   "password"
-    t.string   "mail"
-    t.string   "nickName"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  add_index "employees", ["charge_id"], name: "index_employees_on_charge_id"
 
   create_table "ipqrs", force: true do |t|
     t.string   "name"
@@ -102,17 +68,7 @@ ActiveRecord::Schema.define(version: 20140904152511) do
     t.datetime "updated_at"
   end
 
-  create_table "users", force: true do |t|
-    t.string   "email",                        null: false
-    t.string   "crypted_password",             null: false
-    t.string   "salt",                         null: false
-    t.datetime "created_at"
-    t.datetime "updated_at"
-    t.boolean  "admin"
-    t.boolean  "user"
-    t.string   "name",             limit: nil
-    t.string   "lastname",         limit: nil
-    t.string   "doc",              limit: nil
-  end
+# Could not dump table "users" because of following NoMethodError
+#   undefined method `[]' for nil:NilClass
 
 end
