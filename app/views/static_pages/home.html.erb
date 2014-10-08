@@ -16,7 +16,7 @@
 
     <tbody>
       <% @apartments.each do |apartment| %>
-          <td><div class="img"><%= image_tag apartment.image.url(:thumb) %><div class="form"><div class="des"><%= apartment.amenities %></div><br><%= link_to "ver", apartment_path(apartment), :class => "btn btn-default btn-xs"%></div></td>
+          <td><div class="img"><%= image_tag apartment.image.url(:thumb) %><div class="form"><div class="des"><%= link_to "Ver", apartment_path(apartment), :class => "btn btn-default btn-xs"%><br><strong>Generalidades:</strong><br><%= apartment.amenities %></div><br></div></td>
       <% end %>
     </tbody>
   </table>

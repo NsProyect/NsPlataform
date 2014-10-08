@@ -1,11 +1,12 @@
 <footer class="footer">
   <small>
-    By <%= link_to "https://twitter.com/nanataborda1" do %>Diana Taborda,<% end %> Paola Montes Todos los derechos reservados © 2014 ::.
+    By <%= link_to "https://twitter.com/nanataborda1", :target => '_blank' do %>Diana Taborda,<% end %> Paola Montes <strong>All Rights Reserved © 2014 ::.</strong>
   </small>
   <nav>
     <ul>
-      <li><%= link_to "https://es-la.facebook.com/pages/NS-Apartamentos/540144742664804" do %><%= image_tag "facebook_logo.jpg",class: 'logo'%>Facebook<% end %></li>
-        <li><%= link_to "https://twitter.com/nsapartamentos" do %><%= image_tag "twitter_logo.jpg",class: 'logo'%>Twitter<% end %></li>
+      <li><%= link_to "https://facebook.com/pages/NS-Apartamentos/540144742664804", :target => '_blank' do %><%= image_tag "facebook_logo.jpg",class: 'logo'%>Facebook<% end %></li>
+
+        <li><%= link_to "https://twitter.com/nsapartamentos", :target => '_blank' do %><%= image_tag "twitter_logo.jpg",class: 'logo'%>Twitter<% end %></li>
         <% if current_user %> 
         <% else %> 
           <li><%= link_to "Intranet", :login %> </li>

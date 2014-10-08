@@ -30,6 +30,9 @@
   <strong>Fecha de Salida:</strong>
   <%= @reservation.reservationdateout %>
 </p>
-
+<p>
+  <strong>Estado de la Reserva:</strong>
+  <%= @reservation.state.name rescue nil %>
+</p>
 <%= link_to 'Editar', edit_apartment_reservation_path(@apartment,@reservation), class: "btn btn-default btn-xs" %> 
 <%= link_to 'Atras', reservations_path, class: "btn btn-default btn-xs" %>
