@@ -1,13 +1,15 @@
-<%= form_tag user_sessions_path, :method => :post do %> 
-  <div class="field"> 
-    <%= label_tag :Mail %><br /> 
-    <%= text_field_tag :email %> 
-  </div> 
-  <div class="field"> 
-    <%= label_tag :Contraseña %><br /> 
-    <%= password_field_tag :password %> 
-  </div> 
-  <div class="actions"> 
-    <%= submit_tag "Ingresar", class: "btn btn-primary btn-xs"  %> 
-  </div> 
-<% end %> 
+
+  <%= form_tag user_sessions_path, :method => :post do %> 
+    <div class="field"> 
+     <%= image_tag "correo2.jpeg",class: 'logo2'%><%= label_tag :Email %>
+     <br /> 
+      <%= text_field_tag :email %> 
+    </div> 
+    <div class="field"> 
+      <%= image_tag "contraseña.jpeg",class: 'logo2'%><%= label_tag :Contraseña %><br /> 
+      <%= password_field_tag :password %> 
+    </div> 
+    <div class="actions"> 
+      <%= submit_tag "Ingresar", class: "btn btn-primary btn-xs"  %> 
+    </div> 
+  <% end %> 
