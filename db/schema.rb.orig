@@ -28,18 +28,6 @@ ActiveRecord::Schema.define(version: 20140904152511) do
     t.datetime "image_updated_at"
   end
 
-  create_table "charges", force: true do |t|
-    t.string   "name"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  create_table "contactos", force: true do |t|
-    t.string   "index"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
   create_table "doctypes", force: true do |t|
     t.string   "name"
     t.string   "abbrev"
@@ -47,6 +35,8 @@ ActiveRecord::Schema.define(version: 20140904152511) do
     t.datetime "updated_at"
   end
 
+<<<<<<< HEAD
+=======
   create_table "employees", force: true do |t|
     t.string   "name"
     t.string   "lastName"
@@ -59,6 +49,7 @@ ActiveRecord::Schema.define(version: 20140904152511) do
     t.datetime "updated_at"
   end
 
+>>>>>>> 2560c2d73d45ec3bb1a08179f2443fe34fd59d3e
   create_table "ipqrs", force: true do |t|
     t.string   "name"
     t.string   "mail"
@@ -93,17 +84,7 @@ ActiveRecord::Schema.define(version: 20140904152511) do
     t.datetime "updated_at"
   end
 
-  create_table "users", force: true do |t|
-    t.string   "email",                        null: false
-    t.string   "crypted_password",             null: false
-    t.string   "salt",                         null: false
-    t.datetime "created_at"
-    t.datetime "updated_at"
-    t.boolean  "admin"
-    t.boolean  "user"
-    t.string   "name",             limit: nil
-    t.string   "lastname",         limit: nil
-    t.string   "doc",              limit: nil
-  end
+# Could not dump table "users" because of following NoMethodError
+#   undefined method `[]' for nil:NilClass
 
 end

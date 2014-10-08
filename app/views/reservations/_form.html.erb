@@ -55,6 +55,12 @@
       });
     </script>
   </div>
+  <% if current_user %>
+    <div class="field">
+      Estado <br>
+      <%= f.collection_select :state_id, State.all, :id, :name, class: "form-control", prompt: "Seleccione Estado" %>
+    </div>
+  <% end %>
   <div class="actions">
     <%= f.submit "Guardar", class: "btn btn-success btn-xs" %>
     <%= link_to t('.cancel', :default => t("helpers.links.cancel")), apartment_reservations_path(@apartment), class: "btn btn-danger btn-xs" %> 

@@ -11,15 +11,13 @@ doctypes = [{name: "Cedula de Ciudadania" , abbrev:"C.C"},
 			{name: "Cedula de Extrangeria" , abbrev:"C.E"},
 			{name: "Pasaporte" , abbrev:"Pas"}]
 doctypes.each do |doctype|
-	Doctype.where(doctype).first_or_create
-	
+	Doctype.where(doctype).first_or_create	
 end	
 
 
-states = [{name: "Disponible"},
+states = [{name: "En Proceso"},
 		  {name: "En Reserva"},
-		  {name: "Ocupado"},
-		  {name: "En Mantenimiento"}]
+		  {name: "Ocupado"}]
 states.each do |state|
 	State.where(state).first_or_create	
 end	
@@ -27,4 +25,3 @@ end
 homas_admin = {email:"admin@homas.com", password: "homas", password_confirmation: "homas", admin: true, user: false, name: "Admin", lastname:"Homas", doc:"123456789"}
         
 User.where(email: homas_admin[:email]).first || User.create!(homas_admin)
-	
