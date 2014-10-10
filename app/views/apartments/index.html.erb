@@ -2,8 +2,19 @@
 
 </ul>
 <div class = "well well-sm">
-  
-
+    <%= search_form_for @search , name: 'search', method: 'get', class: "form-inline", role: "form" do |f| %>
+        <div class="field">
+          <label>*Costo($)</label>
+          <div class="form-group">
+            <%= f.text_field :cost_cont %>
+          </div>
+          <label>*Habitaciones(#)</label>
+          <div class="form-group">
+            <%= f.text_field :room_cont %>
+          </div>
+        </div>
+        <div class="actions"><%= f.submit "Search" %></div>
+      <% end %>       
 <table class="table table-striped table-hover ">
   <thead>
     <tr>

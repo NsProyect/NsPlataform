@@ -4,8 +4,6 @@
 
   <iframe width="600" height="430" src="//www.cincopa.com/media-platform/iframe.aspx?fid=AMLAr4b6VQQz" frameborder="0" allowfullscreen scrolling="no"></iframe><noscript><span>Hostal</span><span>El Mejor Hostal De Medellín</span><span>height</span><span> 302</span><span>width</span><span> 403</span><span>originaldate</span><span> 1/1/0001 6:00:00 AM</span><span>El Mejor Hostal De Medellín</span><span>height</span><span> 484</span><span>width</span><span> 640</span><span>originaldate</span><span> 1/1/0001 6:00:00 AM</span><span>El Mejor Hostal De Medellín</span><span>height</span><span> 460</span><span>width</span><span> 840</span><span>originaldate</span><span> 1/1/0001 6:00:00 AM</span><span>El Mejor Hostal De Medellín</span><span>height</span><span> 463</span><span>width</span><span> 640</span><span>originaldate</span><span> 1/1/0001 6:00:00 AM</span></noscript>
 </picture>
-
-
 <div class="aptoHome">
   <table class="table table-striped table-hover ">
     <thead>
@@ -15,31 +13,11 @@
     </thead>
 
     <tbody>
-    <div class="busqueda">
-      <%= form_tag root_path, name: 'search', method: 'get', class: "form-inline", role: "form" do %>
-          <label>*Costo($)</label>
-          <div class="form-group">
-            <%= number_field_tag :costo, nil, required: true %>
-          </div>
-          <label>*Habitaciones(#)</label>
-          <div class="form-group">
-            <%= number_field_tag :room, nil,required: true %>
-          </div>
-          <label>*Fecha Inicio</label>
-          <div class="form-group">
-            <%= text_field_tag :datein, nil,class: 'datepicker', required: true %>
-          </div>
-          <label>*Fecha Hasta</label>
-          <div class="form-group">
-            <%= text_field_tag :dateout,nil, class: 'datepicker', required: true %>
-          </div>
-          <div class="form-group">
-            <button class="btn btn-success btn-sm">
-                <%= image_submit_tag("Buscar") %>
-            </button>
-          </div>
-      <% end %>
-    </div>
+
+
+
+    <%= render 'apartments/buscador' %>
+
       <% @apartments.each do |apartment| %>
           <td><div class="img"><%= image_tag apartment.image.url(:thumb) %><div class="form"><div class="des"><%= link_to "Ver", apartment_path(apartment), :class => "btn btn-default btn-xs"%><br><strong>Generalidades:</strong><br><%= apartment.amenities %></div><br></div></td>
       <% end %>

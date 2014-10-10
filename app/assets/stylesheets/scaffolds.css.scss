@@ -107,11 +107,18 @@ footer ul li {
   margin: 0px -100px 10px 30px; 
 }
 
-.logo{
-  width:10%;
-  height:10%;
-  margin: 0px -200px 0px 0px; 
+.logof{
+ width:40px;
+  height:40px ;
+  margin: -5px 0px 0px 0px;
+ 
 }
+.logot{
+  width:30px;
+  height:30px ;
+ 
+}
+
 .logo2{
   width:10%;
   height:10%;
@@ -197,4 +204,19 @@ a { text­decoration: none; } form { min­width: 300px; }
   margin:10px 560px 0px 0px;
   border-radius: 20px ;
   padding: 40px;
+}
+
+/*__________________________movimiento_________________________*/
+.img{
+ width: 220px;
+ height: 190px;
+ overflow-y: scroll;
+ overflow-x: none;
+}
+.form{
+ height: 128px;
+}
+.des{
+ word-break: break-all;
+ word-wrap: break-word;
 }

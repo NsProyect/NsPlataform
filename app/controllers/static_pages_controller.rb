@@ -1,13 +1,8 @@
 class StaticPagesController < ApplicationController
 	before_filter :require_login, :except => [:home, :about]
   def home
-      if params[:cost]
-         @apartments = Apartment.search(params[:cost],params[:room],params[:datein],params[:dateout])
-      else
-        @apartments = Apartment.all
-      end  
-      
-
+         @search =Apartment.search(params[:q])
+    @apartments = @search.result
   end
 
   def index
